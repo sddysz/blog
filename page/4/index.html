@@ -1,0 +1,1206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>DYSZ&#39; BLOG</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="DYSZ&#39; BLOG">
+<meta property="og:url" content="https://sddysz.cn/blog/page/4/index.html">
+<meta property="og:site_name" content="DYSZ&#39; BLOG">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DYSZ&#39; BLOG">
+  
+    <link rel="alternate" href="/blog/atom.xml" title="DYSZ&#39; BLOG" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/blog/" id="logo">DYSZ&#39; BLOG</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/blog/" id="subtitle">The harder you work, the luckier you will be.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/blog/">Home</a>
+        
+          <a class="main-nav-link" href="/blog/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sddysz.cn/blog"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/2、主数据配置/2.2物料主数据" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/1ba3c6ed.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/1ba3c6ed.html">2.2物料主数据</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="2-2物料主数据"><a href="#2-2物料主数据" class="headerlink" title="2.2物料主数据"></a>2.2物料主数据</h3><ol>
+<li>物料类型</li>
+</ol>
+<ul>
+<li>HAWA–贸易货物</li>
+<li>NLAG–非仓储物料</li>
+<li>FERT–成品</li>
+<li>VERP–包装物料</li>
+<li>DIEN–服务<br>创建物料[MM01]，物料类型必选，会决定物料编码范围</li>
+</ul>
+<ol>
+<li>物料主视图：</li>
+</ol>
+<ul>
+<li>Accounting 1,2:估值和成本信息。如标准价格、历史价格、未来价格、移动评价价。</li>
+<li>MRP 1,2,3,4：物料需求计划（MRP）、基于消费的计划、库存控制（inventory control）、可用性检查等信息。如安全库存水平、计划交货时间等。</li>
+<li>Purchasing：采购物料时提供的数据。如采购组、过量交货容差、不足交货容差</li>
+<li>General Plant Data Storage 1,2:与物料的存储/仓库相关的信息。如发货单位、批次管理、仓储条件等。</li>
+<li>Sales Org Data 1，2 and sales-general/plant data：与销售订单和定价相关的信息。如交货工厂、税收、定价参考物料、<b>项目类别组</b>等，还有可用性检查标志。</li>
+</ul>
+<ol>
+<li>物料主数据计量单位<br>物料可以以不同的计量单位来存储、运输和销售。</li>
+</ol>
+<ul>
+<li>基础计量单位–作为所有事务的基础的计量单位。其他计量单位如果发生任务数量变化，都会自动转换为基础计量单位。</li>
+<li>替代计量单位–可以以不同于基础计量单位的销售单位进行销售管理。必须定义转换因子。</li>
+<li>销售单位–物料销售时的计量单位。</li>
+<li>交货单位–物料交货时的单位。交货只能是交货单位的整数倍。</li>
+</ul>
+<ol>
+<li>数量指标</li>
+</ol>
+<ul>
+<li>最少订货量–客户必须订购的最少量</li>
+<li>最少交货量–必须交付给客户的最少数量。</li>
+</ul>
+<ol>
+<li>客户-物料信息记录<br>客户购买某种特定的物料时，用于该特定客户的物料信息。</li>
+</ol>
+<p>当主数据复制到某事务时，客户-物料信息记录中的数据有优先权。</p>
+<ul>
+<li>主数据优先级，销售订单中工厂数据输入项<ul>
+<li>客户-物料信息主记录</li>
+<li>客户主记录</li>
+<li>物料主记录</li>
+</ul>
+</li>
+<li>创建客户-物料信息主记录<ul>
+<li>VD51</li>
+</ul>
+</li>
+</ul>
+<p>扩展：交货优先级，SAP的重排计划过程。</p>
+<ol>
+<li>主数据特有信息</li>
+</ol>
+<ul>
+<li><p>主数据共享–通用分销渠道和通用产品组</p>
+<ul>
+<li>所有与主数据相关的数据</li>
+<li>所有与条件相关的数据</li>
+<li>只能创建或修改所参照的分销渠道的主数据</li>
+<li>配置时需要在主数据中配置参考，在条件中也需要配置参考</li>
+</ul>
+</li>
+<li><p>客户组</p>
+<ul>
+<li>定义：2位键值</li>
+<li>可以复制到VBAK、VBAP中</li>
+<li>对于报表、定价非常有用</li>
+<li>存储与KNVV</li>
+</ul>
+</li>
+<li>销售区域、销售办公室和销售组<ul>
+<li>可以参照地理区域或只是作为一种编组方式</li>
+<li>会被复制到VBAK、VBAP中</li>
+<li>可以用于统计、定价</li>
+</ul>
+</li>
+<li>主数据表<ul>
+<li>创建新的事务时，主数据会复制到事务数据中</li>
+<li>客户主文件表<ul>
+<li>KNA1：一般数据</li>
+<li>KNB1：公司代码数据</li>
+<li>KNVV：销售数据</li>
+<li>KNKK：信贷管理数据</li>
+<li>KNKA：信贷管理核心数据</li>
+<li>KNVP：合作伙伴功能</li>
+</ul>
+</li>
+<li>物料主文件表<ul>
+<li>MARA：通用数据</li>
+<li>MBEW：物料估值</li>
+<li>MARC：工厂数据</li>
+<li>MARD：仓储地点/批次段</li>
+<li>MVKE：销售数据</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>合作伙伴确定过程</li>
+</ol>
+<p><strong>合作伙伴确定过程</strong>：</p>
+<ul>
+<li>自动合作伙伴确定过程会发生在销售凭证、交货、开单凭证、销售活动和客户主记录中。</li>
+<li>每个合作伙伴功能都会分配一个合作伙伴类型</li>
+<li>配置路径：spro-&gt;sales and distribution -&gt; basic functions -&gt; partner Determination -&gt; set up partner determination</li>
+</ul>
+<p><img src="/blog/images/SAP销售与分销实施指南/图2.2_1.png" alt="设置合作伙伴确定" title="设置合作伙伴确定"></p>
+<p><img src="/blog/images/SAP销售与分销实施指南/图2.2_2.png" alt="设置客户主数据的合作伙伴确定" title="设置客户主数据的合作伙伴确定"></p>
+<p>关于”设置客户主数据的合作伙伴确定”中的字段解释：</p>
+<ul>
+<li>第一个复选框“不可修改”，一旦位于客户主记录中，就不能改变。一般仅用于售达方。</li>
+<li>第二个复选框“代理功能”，将该合作伙伴功能设为必选项，即客户主记录中必须确定或手工输入合作伙伴。</li>
+<li>创建的每一个账户组，都需要分配合作伙伴确定过程，否则不起作用。</li>
+</ul>
+<p><strong>合作伙伴功能</strong>：<br><img src="/blog/images/SAP销售与分销实施指南/图2.2_3.png" alt="分配合作伙伴功能" title="分配合作伙伴功能"></p>
+<ul>
+<li>当给SP合作伙伴功能分配07的不完整过程时，在创建销售订单时，系统使用这个不完整处理过程提示用户以默认值补全必输字段。</li>
+<li>不完整过程分配，在不完整日志功能中也可以定义、分配。</li>
+<li>“更高层的功能”、“客户层次类型”将在9.5中记录。？？？？</li>
+<li>“唯一”表示系统只允许客户主记录中有一个这种功能的输入项。如只能有一个售达方。</li>
+</ul>
+<p><strong>账户组-功能分配</strong>：</p>
+<ul>
+<li>如果用户想创建一个新的客户账户组，必须要分配给许可账户组以确定合作伙伴。</li>
+<li>需要将定义好的客户账户组分配给需要的合作伙伴功能。</li>
+</ul>
+<p><strong>合作伙伴功能转换</strong>：</p>
+<ul>
+<li>如AG被称作SP，因为可以根据语言进行转换。</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/1ba3c6ed.html" data-id="cjd5om7ky00585gvtxhj8p3zg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.1、销售凭证概述" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/cf5719e8.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/cf5719e8.html">3.1、销售凭证概述</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="3-1、销售凭证概述"><a href="#3-1、销售凭证概述" class="headerlink" title="3.1、销售凭证概述"></a>3.1、销售凭证概述</h3><ol>
+<li>概述<br>每一种销售凭证都分为三个层次：</li>
+</ol>
+<ul>
+<li>抬头信息（VBAK）：包含客户、物料主数据以及销售区域与组织数据等信息。</li>
+<li>项目（VBAP）：负责物料项目数据。</li>
+<li>计划行（VBEP）：负责交货日期与交货量。</li>
+</ul>
+<p>业务数据（VBKD）：如国际贸易术语等。可以针对抬头或项目。抬头业务数据会默认应用于订单上的所有行项目。</p>
+<ol>
+<li>基础销售订单处理过程</li>
+</ol>
+<ul>
+<li><em>销售订单</em>是销售机构和客户之间的合约协议，用来在一段时间内提供一定数量的服务或产品。</li>
+<li>订单从客户主数据和物料主数据中获得信息。这些数据需要根据销售凭证类型、行项目类别与计划行类别等信息来应用到上下文环境中。</li>
+<li>订单可以参照以前的凭证（如报价单）来创建，会自动将数据复制到新的凭证中。</li>
+<li>交货凭证创建时，订单中的数据会复制到交货凭证中。</li>
+<li>每种凭证都有一种<strong>凭证类型</strong>来表示。</li>
+<li>SAP可以自动根据登录语言显示订单的描述。</li>
+<li>语言转换配置路径：spro-&gt;sales and distribution -&gt; sales -&gt; sales documents -&gt; sales document header -&gt; convert language for each sales document type</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/cf5719e8.html" data-id="cjd5om7ky005a5gvtxl9kv9fe" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.2、编号范围" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/3e30a76d.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/3e30a76d.html">3.2、编号范围</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-2、编号范围"><a href="#3-2、编号范围" class="headerlink" title="3.2、编号范围"></a>3.2、编号范围</h4><ol>
+<li>基本概念</li>
+</ol>
+<ul>
+<li>凭证类型会被分配一个编号范围。</li>
+<li>编号范围也可以用于主数据对象</li>
+</ul>
+<ol>
+<li><p>菜单路径<br> spro-&gt;sales and distribution -&gt;master data-&gt;item proposal -&gt;define number ranges for item propsals<br><img src="/blog/images/SAP销售与分销实施指南/图3.2_1.png" alt="定义项目建议的编号范围" title="定义项目建议的编号范围"></p>
+<p>定义编号间隔范围。  </p>
+</li>
+<li>要创建新的编号范围，业务需求先得准确，需要定义足够大的编号范围。</li>
+</ol>
+<ul>
+<li>内部编码：系统自动提示编号范围以及接下来可以使用的编号</li>
+<li>外部编码：系统支持用户指定已经不再使用的编号，以及在对象编号范围之内的编号。</li>
+</ul>
+<ol>
+<li>注意事项</li>
+</ol>
+<ul>
+<li>编号范围可以通过手工方式在集团之间移植。</li>
+<li>移植编号范围时，目标集团内部的区间会被删除，然后生成新的编号范围和分配状态</li>
+<li>传输请求时需要注意：在两个系统都没有数据时进行传输，之后不能再传</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/3e30a76d.html" data-id="cjd5om7ky005d5gvtzdq1mmxs" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.3、行项目建议" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/3c549318.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/3c549318.html">3.3、行项目建议（产品组合建议）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-3、行项目建议（产品组合建议）"><a href="#3-3、行项目建议（产品组合建议）" class="headerlink" title="3.3、行项目建议（产品组合建议）"></a>3.3、行项目建议（产品组合建议）</h4><ul>
+<li>行项目建议：是通常基于客户而组织在一起的物料和订单数量的清单。</li>
+<li>行项目建议特定与销售区域，可以在生成销售订单的时候来参照。</li>
+</ul>
+<p><strong>配置路径</strong>:</p>
+<ul>
+<li>spro-&gt;sales and distribution -&gt;master data-&gt;item proposal-&gt;define item proposal types。</li>
+<li>【VOV8】<br>凭证类型 PV-Item Proposal</li>
+</ul>
+<p>行项目建议可能是相关项目，也可能是无关项目。<br>行项目建议与销售BOM不同。—–后续验证?????????</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/3c549318.html" data-id="cjd5om7ky005g5gvtn2nnoqox" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.4、凭证类型" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/252daea0.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/252daea0.html">3.4、销售凭证类型</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-4、销售凭证类型"><a href="#3-4、销售凭证类型" class="headerlink" title="3.4、销售凭证类型"></a>3.4、销售凭证类型</h4><p>销售凭证类型控制这销售凭证的运作机制。<br>三层控制体制</p>
+<ul>
+<li>销售凭证抬头信息–销售凭证类型</li>
+<li>销售凭证行项目–行项目类型</li>
+<li>销售凭证计划行–计划行类别</li>
+</ul>
+<ol>
+<li>销售凭证类型配置【VOV8】</li>
+</ol>
+<ul>
+<li>创建一种新的凭证类型时，应参照最接近的凭证类型，复制后修改</li>
+<li>要更改SAP凭证类型时，字号是复制凭证类型，给出一个新的名字</li>
+<li>复制或创建新的凭证类型时，必须以Z或Y开头。</li>
+</ul>
+<p>销售凭证类型相关字段的含义：<br><strong>凭证类型字段详解</strong></p>
+<p><img src="/blog/images/SAP销售与分销实施指南/图3.3_1.png" alt="定义销售凭证类型" title="定义销售凭证类型"></p>
+<ul>
+<li>凭证类别：SAP中预设的，不能添加。控制着系统的行为。  —–需要测试其他类型？？？？<ul>
+<li>A – 询价</li>
+<li>B – 报价</li>
+<li>C – 订单</li>
+<li>D – 项目建议</li>
+<li>E – 计划协议</li>
+<li>F – 带有外部服务代理的计划协议</li>
+<li>H – 退货</li>
+<li>I – 不含费用的订单</li>
+<li>W – 独立需求计划</li>
+<li>G – 合同</li>
+<li>K – 贷项凭证申请</li>
+<li>L – 借项凭证请求</li>
+<li>0 – 主合同</li>
+</ul>
+</li>
+<li>销售凭证冻结：如果标记为X，该凭证类型不可用于凭证的业务处理</li>
+<li>内部和外部编号范围码</li>
+<li>销售凭证内的项目编码以10为单位增量，子项目增量也是10</li>
+<li>必备参考：在创建订单之前，需要参考哪种凭证类型  —- 需要测试？？？<ul>
+<li>– 无需要的参考</li>
+<li>A    – 带有引用到询价</li>
+<li>B    – 带有引用到报价</li>
+<li>C    – 带有引用到销售订单</li>
+<li>E    – 计划协议参考</li>
+<li>G    – 带有引用到数量合同</li>
+<li>M    – 带有参照出具发票凭证</li>
+</ul>
+</li>
+<li><p>物料条目类型：物料或项目产品组是如何复制到销售订单中—–不明白？？？</p>
+<ul>
+<li>– 输入物料编号</li>
+<li>A    – 输入物料编号和产品目录确定</li>
+<li>B    – 输入物料编号和产品目录确定</li>
+</ul>
+</li>
+<li><p>检查产品组：检查项目中的产品组是否等于抬头的产品组，选择错误的提示方式 —-需要测试？？？？</p>
+<ul>
+<li>– 没有对话</li>
+<li>1 – 对话</li>
+<li>2 – 错误</li>
+</ul>
+</li>
+<li>订单可能性：100%。用于确认订单生成需求的可能性，可以计算预计的订单总值—-需要测试？？？？</li>
+<li>读取信息记录（read info record）:如果可以的话，系统必须读取客户物料主数据—–需要测试？？？？</li>
+<li><p>检查信用限额（credit limit check）：信贷检查规则和提示方式。—需要测试？</p>
+<ul>
+<li>– 没有信用限制检查</li>
+<li>A    – 运行简单信用限制检查和警告消息</li>
+<li>B    – 运行简单信用限制检查和错误消息</li>
+<li>C    – 运行简单信用限制检查和交货冻结</li>
+<li>D    – 信用管理: 自动信用控制</li>
+</ul>
+</li>
+<li><p>purchase order number：系统如何检查采购订单号 —需要测试，采购订单号从哪里来？？？</p>
+<ul>
+<li>A    – 检查采购订单编号是否已存在</li>
+<li>– 未检查</li>
+</ul>
+</li>
+<li>信贷组（）：指定使用哪种信贷组检查该订单类型的信贷情况。 —学习信贷时配置？？？？</li>
+<li>输出应用程序（output application）：使用哪种应用程序处理订单，V1–销售–需要测试？？？</li>
+<li>承诺日期：用于计算承诺数量—-？？？？？<ul>
+<li>– 不要维护承诺日期</li>
+<li>A – 仅考虑同意的交货时间</li>
+<li>B – 第一确认日期</li>
+<li>C – 最好的确认日期, 保存直到现在</li>
+</ul>
+</li>
+<li><p>屏幕顺序组：控制数据显示的方式和顺序？？</p>
+<ul>
+<li>AG – 询价，报价</li>
+<li>AM – 交货单</li>
+<li>AMK – 交货定单纠正</li>
+<li>AU – 销售订单</li>
+<li>GA – 贷项/借项凭单</li>
+<li>GK – 主合同</li>
+<li>KM – 合同</li>
+<li>LL – </li>
+<li>LP – 框架协议</li>
+<li>MA – 产品建议</li>
+<li>PB – 独立需求</li>
+<li>RE – 退货</li>
+<li>VT – </li>
+<li>WK – 价值合同</li>
+<li>WK1 – 与物料相关的价值合同</li>
+</ul>
+</li>
+<li><p>显示范围： 销售订单中显示哪些数据</p>
+<ul>
+<li>UALL – 全部项目</li>
+<li>UHAU – 主要项</li>
+<li>UMAR – 所选项</li>
+</ul>
+</li>
+<li>总览屏幕的功能码：未知？？？？</li>
+<li>不完整性处理：控制订单的完整性检查的过程。不完整过程的配置【OVA2】，路径–spro-&gt;销售与分销-&gt; 基本功能-&gt;不完整日志</li>
+<li>事务组：控制着将要在各自表格中更新的数据—？？？</li>
+<li>凭证定价流程：决定系统将要在销售订单中使用何种定价流程的一项指标，即凭证的定价指示符。</li>
+<li>状态参数文件：</li>
+</ul>
+<p><strong>其他的字段暂时不做解释，后续学习测试后再添加</strong></p>
+<ol>
+<li>给销售凭证分配销售区域</li>
+</ol>
+<p>事务码【OVAZ】<br>决定哪些销售区域可以使用此销售凭证类型</p>
+<ol>
+<li>销售凭证的订单原因<br>【OVAU】</li>
+</ol>
+<p>订单原因可以用于后勤信息系统，可以在报表中用于分析</p>
+<ol>
+<li>定义销售凭证的采购订单类型</li>
+</ol>
+<p>可以用于分析。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/252daea0.html" data-id="cjd5om7ky005j5gvtyityow47" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.5、项目类别和确定过程" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/1775e7d2.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/1775e7d2.html">3.5、销售订单项目类别和确定过程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-5、销售订单项目类别和确定过程"><a href="#3-5、销售订单项目类别和确定过程" class="headerlink" title="3.5、销售订单项目类别和确定过程"></a>3.5、销售订单项目类别和确定过程</h4><ol>
+<li>定义项目类别</li>
+</ol>
+<p>项目类别是创建订单时系统自动确定的，可以手工修改。</p>
+<ol>
+<li>项目类别的业务数据字段：</li>
+</ol>
+<p>业务数据：</p>
+<ul>
+<li>项目类型：系统的控制指示符，标准项目的值为空。作用未知？？？？</li>
+<li>完成规则：与复制控制相关。未知？？？</li>
+<li><p>特别库存：对于特殊存货处理的项目使用</p>
+<ul>
+<li>B    – 客户库存</li>
+<li>C    – SC客户库存</li>
+<li>E    – 现有订单</li>
+<li>F    – SC客户订单库存</li>
+<li>I    – SC RTP</li>
+<li>J    – SC供应商寄售</li>
+<li>K    – 寄售（供应商）</li>
+<li>M    – 供应商可退回包装</li>
+<li>O    – 供应商分包库存</li>
+<li>P    – 管线材料</li>
+<li>Q    – 项目库存</li>
+<li>R    – SC 项目库存</li>
+<li>T    – 在途库存</li>
+<li>V    – 客户处可退回包装</li>
+<li>W    – 寄售（客户方）</li>
+<li>Y    – 装运单位 (仓库)</li>
+</ul>
+</li>
+<li><p>出具发票相关性：要与发票初级类型标志配合使用。确定开票是交货相关还是与订单相关</p>
+</li>
+<li>出具发票计划类型：定义项目执行开票的方式。–详细内容建第七章？？？<ul>
+<li>01    期段出据发票</li>
+<li>02    期段</li>
+<li>04    里程碑开票 DP90</li>
+</ul>
+</li>
+<li>出具发票冻结：用于冻结此类别开票的项目</li>
+<li>统计值标志：是否在抬头上计算项目的整体取值</li>
+<li>收入确认：项目的收入的认定类别。例如确认收入的同时生成发票</li>
+<li>定界起始日期：确定收入确认期间的开始日期</li>
+<li>业务项目：标记是否允许项目中的业务数据与抬头信息中的业务数据不通（业务数据存储于表【VBKD】中，可能与抬头或项目相关）</li>
+<li>允许的计划行：确定此项目类别是否支持计划行</li>
+<li>交货相关项目：指示系统将项目从销售订单复制到交货单。应该用于指示将本项目以<em>文本项目</em>形式复制到交货单中。</li>
+<li>退货：定义项目是否是退货。</li>
+<li>与重量/体积相关：系统是否应该根据这些特性来计算这些字段</li>
+<li>激活信贷：本项目与信用控制更新和信贷统计有关</li>
+<li>确定成本：系统在定价过程中使用条件类型VPRS来只是本项目的成本价<br>一般控制：</li>
+<li>自动批确定：指示系统在销售订单执行本项目的分批确定。（分配物料批次）</li>
+<li>舍入允许：允许系统舍入订购数量。—–？</li>
+<li>订单数量=1：设定后系统将每个项目的数量限制为1</li>
+</ul>
+<p>事务流程：</p>
+<ul>
+<li>不完整性过程：用于确定项目的必填字段信息</li>
+<li>合作伙伴确定过程：—第四章？？？</li>
+<li>文本确定过程：—第四章？？？</li>
+<li>项目类别统计组：指示哪些项目类别时与统计更新过程相关的。可以将统计组分配给：项目类别、销售凭证类型、客户物料、发运类型、运输服务代理</li>
+<li>屏幕顺序组：控制显示行项目时可以看到哪些屏幕—-？</li>
+<li>状态参数文件：是状态参数的指示码。—–第四章？？？？</li>
+<li>自动创建采购订单：用于支持自动创建第三方项目的订购接管单和订购单？？？？</li>
+</ul>
+<p>物料/清单配置相关配置—-第5章？？？？</p>
+<p>价值合同相关：</p>
+<ul>
+<li>价值合同物料：可以输入一个物料编码，对于价值合同，系统会自动把物料复制到价值合同中</li>
+<li>合同发放控制：超出价值和合同的目标数量后的系统行为。<br>服务管理</li>
+<li>维修过程：—-？</li>
+</ul>
+<p>相关资源开票的控制和报价单创建</p>
+<ul>
+<li>开票表单：确定与资源相关的开票项目如何开具发票—-？</li>
+<li>DIP参数文件：针对资源开票来计算—–？</li>
+</ul>
+<ol>
+<li>项目类别确定</li>
+</ol>
+<p>确定条件</p>
+<ul>
+<li>项目类别组：物料主数据中</li>
+<li>销售凭证类型：订单类型</li>
+<li>用途：用于设置项目类别使用状况的指示符</li>
+<li>是否存在一个上层项目的指示符：</li>
+</ul>
+<p>路径：SAP IMG-&gt; sales and distribution-&gt;sales-&gt;sales document -&gt; sales document item -&gt; assign item categories</p>
+<ul>
+<li>项目类别确定可以手工更改，可以定义11个手工输入值</li>
+</ul>
+<ol>
+<li>项目类别组<br>可以定义自己的项目类别组<br>路径：SAP IMG-&gt; sales and distribution-&gt;sales-&gt;sales document -&gt; sales document item -&gt;define item category groups</li>
+</ol>
+<ul>
+<li>之后可以作为默认值分配给物料类型，每个物料类型会有默认项目类别</li>
+<li>可以手工在物料主数据中更改</li>
+</ul>
+<ol>
+<li>项目类别用途<br>项目类别用途是在创建订单时由SAP来定义的。—-？？？？？</li>
+</ol>
+<ol>
+<li>上层项目<br>与销售BOM相关的。物料的销售BOM的项目类别作为上层项目，各子物料组成子项目</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/1775e7d2.html" data-id="cjd5om7ky005m5gvtyq3735jf" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.6、计划行类别" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/af3e60fd.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/af3e60fd.html">3.6、计划行类别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-6、计划行类别"><a href="#3-6、计划行类别" class="headerlink" title="3.6、计划行类别"></a>3.6、计划行类别</h4><ul>
+<li>计划行表示的时项目将于何时交付。</li>
+<li>控制着发运时物料需求计划和执行。</li>
+<li>计划行类别是由项目物料主数据上的项目类别和MRP类型决定的。–分配中</li>
+<li>计划行组成的项目可能与交货无关。</li>
+</ul>
+<ol>
+<li>定义计划行类别<br>路径：SAP IMG-&gt; sales and distribution -&gt;sales-&gt; sales documents -&gt; schedule lines -&gt; define schedule line categories<br>事务码【VOV6】<br>步骤：</li>
+</ol>
+<ul>
+<li>定义计划行类别</li>
+<li>分配计划行</li>
+</ul>
+<ol>
+<li>字段明细</li>
+</ol>
+<ul>
+<li>交货冻结：是否自动创建交货冻结<ul>
+<li>交货冻结在下述情形可以设为自动<ul>
+<li>销售凭证类型</li>
+<li>计划行类别</li>
+<li>交货类型</li>
+<li>发运活动</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>移动类型：库存的移动类型</li>
+<li>移动类型第一步：如果计划行类别会发生两次货物移动，需要使用第一步</li>
+<li>订单类型：将采购订单类型分配给计划行，第三方销售中系统会自动触发采购申请的创建</li>
+<li>项目类别：对应采购凭证或采购申请的项目类别</li>
+<li>科目分配类别：项目本身需要哪种科目设置</li>
+<li>交货相关项目：勾选后才能确定该计划行与交货相关</li>
+<li>请购单交货计划：勾选后会根据请购单生成的期望接收时间重新确定计划行的交货日期。</li>
+<li>不完整性过程：检查计划行相关的信息是否完整</li>
+<li>请求/装配：将物料需求是否转移到生产过程</li>
+<li>可用性检查：本项目是否与可用性检查相关</li>
+<li>生产分配：</li>
+</ul>
+<ol>
+<li>计划行类别确定<br>根据 销售订单行项目类别+MRP类型，确定计划行类别</li>
+</ol>
+<ol>
+<li>销售凭证的总结概要<br>标准销售事务流：订单–交货–开票</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/af3e60fd.html" data-id="cjd5om7ky005p5gvtaet41iaq" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.8、特殊销售凭证" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/9312c712.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/9312c712.html">3.8特殊销售凭证</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-8特殊销售凭证"><a href="#3-8特殊销售凭证" class="headerlink" title="3.8特殊销售凭证"></a>3.8特殊销售凭证</h4><p>SD中标准业务流程：</p>
+<ul>
+<li>报价单</li>
+<li>现金销售流程与加急订单流程</li>
+<li>借贷周期</li>
+<li>退货与发票更正请求过程</li>
+<li>合同</li>
+<li>计划协议</li>
+</ul>
+<ol>
+<li><p>报价单</p>
+<ul>
+<li>销售凭证类型AG；英文环境中QT</li>
+<li>先于销售订单，迟于询价</li>
+<li>可以确认物料是否可以在合理的时间、以合理的价格提供给客户。</li>
+<li>报价单可以复制到销售订单</li>
+<li>销售凭证类别为B</li>
+<li>标准项目类别是AGN</li>
+<li>订货概率–客户主数据的订货概率与销售凭证上的订货概率组合为报价单确定为真正需求的可能性。</li>
+</ul>
+</li>
+<li><p>现金销售流程</p>
+<ul>
+<li>销售凭证类型BV</li>
+<li>订单保存完毕后，系统自动创建交货，打印现金销售发票，发票传递给售达方。</li>
+<li>可以通过输出确定过程打印纸质凭证</li>
+</ul>
+</li>
+<li>加急订单流程<ul>
+<li>销售凭证类型SO</li>
+<li>订单保存完成后，系统自动创建交货，但是不打印发票，使用标准过程创建开票</li>
+<li>与标准订单的区域在于：加急订单会立即创建交货</li>
+</ul>
+</li>
+<li>贷记流程<ul>
+<li>凭证类型G2</li>
+<li>适用场景：<ul>
+<li>客户退还购买的产品 – 产品报废，给客户退钱，但不退货</li>
+<li>客户不退还任何产品 – 收费过高，给客户退钱</li>
+</ul>
+</li>
+<li>可以自动设置开票冻结，开票前由授权人解冻</li>
+<li>贷项订单的标准项目类型：G2N</li>
+</ul>
+</li>
+<li>借记流程<ul>
+<li>销售凭证类型DR</li>
+<li>适用场景：<ul>
+<li>少收客户钱款，需要补收</li>
+<li>对客户进行罚款</li>
+</ul>
+</li>
+<li>可以自动设置开票冻结</li>
+</ul>
+</li>
+<li>退货流程<ul>
+<li>销售凭证类型RE</li>
+<li>产生货物移动</li>
+<li>标准项目类型：REN</li>
+</ul>
+</li>
+<li>发票更正请求<ul>
+<li>销售凭证类型RK</li>
+<li>需要参照发票进行</li>
+<li>两个项目<ul>
+<li>第一个项目是从发票复制而得的值和数量，贷记</li>
+<li>第二个项目是正确的数量和值，借记</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/9312c712.html" data-id="cjd5om7ky005s5gvtyjzzen2y" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.7、复制控制" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/2fe0931f.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/2fe0931f.html">3.7、复制控制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-7、复制控制"><a href="#3-7、复制控制" class="headerlink" title="3.7、复制控制"></a>3.7、复制控制</h4><p>系统使用复制控制来确定凭证类型、项目类别和计划行类别(销售订单的三层数据)相互复制。</p>
+<ol>
+<li>对于销售凭证   </li>
+</ol>
+<ul>
+<li>使用本选项控制合同、报价及订单间的复制</li>
+<li>SAP IMG-&gt; sales and distribution-&gt;sales-&gt;maintain copy control for sales documents<ul>
+<li>销售凭证到销售凭证复制【VTAA】</li>
+<li>出具发票单据到销售单据【VTAF】</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>对于交货凭证</li>
+</ol>
+<ul>
+<li>控制从销售订单到交货的复制</li>
+<li>SAP IMG-&gt;Logistics Execution -&gt; Shipping-&gt;Copying Control</li>
+<li>【VTLA】</li>
+</ul>
+<ol>
+<li>对于开票凭证</li>
+</ol>
+<ul>
+<li>控制从销售订单或交货到开票凭证的复制</li>
+<li>SAP IMG-&gt; sales and distribution -&gt; billing-&gt;billing documents-&gt;maintain copying control for billing documents<ul>
+<li>订单到开票【VTFA】</li>
+<li>交货到开票【VTFL】</li>
+<li>开票到开票【VTFF】</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>销售凭证的复制控制<br>用于参照另一个销售凭证来创建某个销售凭证。<br>【vofm】</li>
+</ol>
+<ul>
+<li>抬头复制配置<ul>
+<li>源类型/目标类型：</li>
+<li>复制需求：检查复制发生前必须满足的规则/标准</li>
+<li>传输例程：复制传输数据使用的例程<ul>
+<li>复制数据传送VBAK的请求</li>
+<li>复制传递业务数据的请求</li>
+<li>为合作伙伴数据VBPA复制需求</li>
+</ul>
+</li>
+<li>复制项目编号：复制项目编号还是重新编序</li>
+<li>完全参照：限定用户复制整个凭证</li>
+</ul>
+</li>
+<li>项目复制配置<ul>
+<li>源凭证类型、项目类别，目标凭证类型、项目类别</li>
+<li>复制需求：</li>
+<li>传输例程</li>
+<li>FPLA：检查开票计划是否满足的例程</li>
+<li>复制计划行：</li>
+<li>更新凭证流：强制系统创建凭证流记录</li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/2fe0931f.html" data-id="cjd5om7le005v5gvtv81ybwuh" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/4、合同与特殊流程/4.1、数量合同" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/blog/79c51bcc.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/blog/79c51bcc.html">4.1、数量合同</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/blog/79c51bcc.html" data-id="cjd5om7le005y5gvtzf3xklc2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/blog/page/3/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/blog/page/5/">5</a><a class="extend next" rel="next" href="/blog/page/5/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/SAP/">SAP</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/SAP/PA-SD教程/">PA-SD教程</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/office/">office</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/office/ppt/">ppt</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/读书笔记/">读书笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/PA教程/">PA教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SD/">SD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/office/">office</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ppt/">ppt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/小说/">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/读书/">读书</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/blog/tags/PA教程/" style="font-size: 16.67px;">PA教程</a> <a href="/blog/tags/SAP/" style="font-size: 20px;">SAP</a> <a href="/blog/tags/SD/" style="font-size: 20px;">SD</a> <a href="/blog/tags/office/" style="font-size: 13.33px;">office</a> <a href="/blog/tags/ppt/" style="font-size: 13.33px;">ppt</a> <a href="/blog/tags/小说/" style="font-size: 10px;">小说</a> <a href="/blog/tags/读书/" style="font-size: 10px;">读书</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/blog/91ea59ef.html">销售组织机构特征对比</a>
+          </li>
+        
+          <li>
+            <a href="/blog/3fd54d83.html">销售与分销模块笔记</a>
+          </li>
+        
+          <li>
+            <a href="/blog/c3d1f900.html">一、幻灯片设计前的内容梳理</a>
+          </li>
+        
+          <li>
+            <a href="/blog/15a628d8.html">五、关于模板</a>
+          </li>
+        
+          <li>
+            <a href="/blog/f76ce67d.html">三、动画在幻灯片中的3大作用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 DYSZ<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/blog/" class="mobile-nav-link">Home</a>
+  
+    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
+  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/blog/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
