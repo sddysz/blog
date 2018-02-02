@@ -9,13 +9,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="DYSZ&#39; BLOG">
-<meta property="og:url" content="https://sddysz.cn/blog/page/4/index.html">
+<meta property="og:url" content="https://sddysz.cn/page/4/index.html">
 <meta property="og:site_name" content="DYSZ&#39; BLOG">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DYSZ&#39; BLOG">
   
-    <link rel="alternate" href="/blog/atom.xml" title="DYSZ&#39; BLOG" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="DYSZ&#39; BLOG" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -23,7 +23,7 @@
   
     <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
   
-  <link rel="stylesheet" href="/blog/css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -34,11 +34,11 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/blog/" id="logo">DYSZ&#39; BLOG</a>
+        <a href="/" id="logo">DYSZ&#39; BLOG</a>
       </h1>
       
         <h2 id="subtitle-wrap">
-          <a href="/blog/" id="subtitle">The harder you work, the luckier you will be.</a>
+          <a href="/" id="subtitle">The harder you work, the luckier you will be.</a>
         </h2>
       
     </div>
@@ -46,19 +46,19 @@
       <nav id="main-nav">
         <a id="main-nav-toggle" class="nav-icon"></a>
         
-          <a class="main-nav-link" href="/blog/">Home</a>
+          <a class="main-nav-link" href="/">Home</a>
         
-          <a class="main-nav-link" href="/blog/archives">Archives</a>
+          <a class="main-nav-link" href="/archives">Archives</a>
         
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/blog/atom.xml" title="RSS Feed"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
       </nav>
       <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sddysz.cn/blog"></form>
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sddysz.cn"></form>
       </div>
     </div>
   </div>
@@ -66,190 +66,14 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Reading_Notes/SAP销售与分销实施指南/2、主数据配置/2.2物料主数据" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/1ba3c6ed.html" class="article-date">
-  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/1ba3c6ed.html">2.2物料主数据</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="2-2物料主数据"><a href="#2-2物料主数据" class="headerlink" title="2.2物料主数据"></a>2.2物料主数据</h3><ol>
-<li>物料类型</li>
-</ol>
-<ul>
-<li>HAWA–贸易货物</li>
-<li>NLAG–非仓储物料</li>
-<li>FERT–成品</li>
-<li>VERP–包装物料</li>
-<li>DIEN–服务<br>创建物料[MM01]，物料类型必选，会决定物料编码范围</li>
-</ul>
-<ol>
-<li>物料主视图：</li>
-</ol>
-<ul>
-<li>Accounting 1,2:估值和成本信息。如标准价格、历史价格、未来价格、移动评价价。</li>
-<li>MRP 1,2,3,4：物料需求计划（MRP）、基于消费的计划、库存控制（inventory control）、可用性检查等信息。如安全库存水平、计划交货时间等。</li>
-<li>Purchasing：采购物料时提供的数据。如采购组、过量交货容差、不足交货容差</li>
-<li>General Plant Data Storage 1,2:与物料的存储/仓库相关的信息。如发货单位、批次管理、仓储条件等。</li>
-<li>Sales Org Data 1，2 and sales-general/plant data：与销售订单和定价相关的信息。如交货工厂、税收、定价参考物料、<b>项目类别组</b>等，还有可用性检查标志。</li>
-</ul>
-<ol>
-<li>物料主数据计量单位<br>物料可以以不同的计量单位来存储、运输和销售。</li>
-</ol>
-<ul>
-<li>基础计量单位–作为所有事务的基础的计量单位。其他计量单位如果发生任务数量变化，都会自动转换为基础计量单位。</li>
-<li>替代计量单位–可以以不同于基础计量单位的销售单位进行销售管理。必须定义转换因子。</li>
-<li>销售单位–物料销售时的计量单位。</li>
-<li>交货单位–物料交货时的单位。交货只能是交货单位的整数倍。</li>
-</ul>
-<ol>
-<li>数量指标</li>
-</ol>
-<ul>
-<li>最少订货量–客户必须订购的最少量</li>
-<li>最少交货量–必须交付给客户的最少数量。</li>
-</ul>
-<ol>
-<li>客户-物料信息记录<br>客户购买某种特定的物料时，用于该特定客户的物料信息。</li>
-</ol>
-<p>当主数据复制到某事务时，客户-物料信息记录中的数据有优先权。</p>
-<ul>
-<li>主数据优先级，销售订单中工厂数据输入项<ul>
-<li>客户-物料信息主记录</li>
-<li>客户主记录</li>
-<li>物料主记录</li>
-</ul>
-</li>
-<li>创建客户-物料信息主记录<ul>
-<li>VD51</li>
-</ul>
-</li>
-</ul>
-<p>扩展：交货优先级，SAP的重排计划过程。</p>
-<ol>
-<li>主数据特有信息</li>
-</ol>
-<ul>
-<li><p>主数据共享–通用分销渠道和通用产品组</p>
-<ul>
-<li>所有与主数据相关的数据</li>
-<li>所有与条件相关的数据</li>
-<li>只能创建或修改所参照的分销渠道的主数据</li>
-<li>配置时需要在主数据中配置参考，在条件中也需要配置参考</li>
-</ul>
-</li>
-<li><p>客户组</p>
-<ul>
-<li>定义：2位键值</li>
-<li>可以复制到VBAK、VBAP中</li>
-<li>对于报表、定价非常有用</li>
-<li>存储与KNVV</li>
-</ul>
-</li>
-<li>销售区域、销售办公室和销售组<ul>
-<li>可以参照地理区域或只是作为一种编组方式</li>
-<li>会被复制到VBAK、VBAP中</li>
-<li>可以用于统计、定价</li>
-</ul>
-</li>
-<li>主数据表<ul>
-<li>创建新的事务时，主数据会复制到事务数据中</li>
-<li>客户主文件表<ul>
-<li>KNA1：一般数据</li>
-<li>KNB1：公司代码数据</li>
-<li>KNVV：销售数据</li>
-<li>KNKK：信贷管理数据</li>
-<li>KNKA：信贷管理核心数据</li>
-<li>KNVP：合作伙伴功能</li>
-</ul>
-</li>
-<li>物料主文件表<ul>
-<li>MARA：通用数据</li>
-<li>MBEW：物料估值</li>
-<li>MARC：工厂数据</li>
-<li>MARD：仓储地点/批次段</li>
-<li>MVKE：销售数据</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>合作伙伴确定过程</li>
-</ol>
-<p><strong>合作伙伴确定过程</strong>：</p>
-<ul>
-<li>自动合作伙伴确定过程会发生在销售凭证、交货、开单凭证、销售活动和客户主记录中。</li>
-<li>每个合作伙伴功能都会分配一个合作伙伴类型</li>
-<li>配置路径：spro-&gt;sales and distribution -&gt; basic functions -&gt; partner Determination -&gt; set up partner determination</li>
-</ul>
-<p><img src="/blog/images/SAP销售与分销实施指南/图2.2_1.png" alt="设置合作伙伴确定" title="设置合作伙伴确定"></p>
-<p><img src="/blog/images/SAP销售与分销实施指南/图2.2_2.png" alt="设置客户主数据的合作伙伴确定" title="设置客户主数据的合作伙伴确定"></p>
-<p>关于”设置客户主数据的合作伙伴确定”中的字段解释：</p>
-<ul>
-<li>第一个复选框“不可修改”，一旦位于客户主记录中，就不能改变。一般仅用于售达方。</li>
-<li>第二个复选框“代理功能”，将该合作伙伴功能设为必选项，即客户主记录中必须确定或手工输入合作伙伴。</li>
-<li>创建的每一个账户组，都需要分配合作伙伴确定过程，否则不起作用。</li>
-</ul>
-<p><strong>合作伙伴功能</strong>：<br><img src="/blog/images/SAP销售与分销实施指南/图2.2_3.png" alt="分配合作伙伴功能" title="分配合作伙伴功能"></p>
-<ul>
-<li>当给SP合作伙伴功能分配07的不完整过程时，在创建销售订单时，系统使用这个不完整处理过程提示用户以默认值补全必输字段。</li>
-<li>不完整过程分配，在不完整日志功能中也可以定义、分配。</li>
-<li>“更高层的功能”、“客户层次类型”将在9.5中记录。？？？？</li>
-<li>“唯一”表示系统只允许客户主记录中有一个这种功能的输入项。如只能有一个售达方。</li>
-</ul>
-<p><strong>账户组-功能分配</strong>：</p>
-<ul>
-<li>如果用户想创建一个新的客户账户组，必须要分配给许可账户组以确定合作伙伴。</li>
-<li>需要将定义好的客户账户组分配给需要的合作伙伴功能。</li>
-</ul>
-<p><strong>合作伙伴功能转换</strong>：</p>
-<ul>
-<li>如AG被称作SP，因为可以根据语言进行转换。</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/1ba3c6ed.html" data-id="cjd5om7ky00585gvtxhj8p3zg" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.1、销售凭证概述" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/cf5719e8.html" class="article-date">
+    <a href="/cf5719e8.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
   </div>
 
   </div>
@@ -260,7 +84,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/cf5719e8.html">3.1、销售凭证概述</a>
+      <a class="article-title" href="/cf5719e8.html">3.1、销售凭证概述</a>
     </h1>
   
 
@@ -293,10 +117,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/cf5719e8.html" data-id="cjd5om7ky005a5gvtxl9kv9fe" class="article-share-link">Share</a>
+      <a data-url="https://sddysz.cn/cf5719e8.html" data-id="cjd5oz5bu0058nkvtlt1p9uw1" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
 
     </footer>
   </div>
@@ -305,14 +129,14 @@
 
 
   
-    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.2、编号范围" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/2、主数据配置/2.1客户主记录" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/3e30a76d.html" class="article-date">
+    <a href="/f869fbf2.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
   </div>
 
   </div>
@@ -323,7 +147,88 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/3e30a76d.html">3.2、编号范围</a>
+      <a class="article-title" href="/f869fbf2.html">2.1客户主记录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="2-1客户主记录"><a href="#2-1客户主记录" class="headerlink" title="2.1客户主记录"></a>2.1客户主记录</h3><ol>
+<li>概念<br>客户主记录是所有销售事务以及交货和付款的基础。根据客户主记录在事务中所承担的角色，可以表示不同的实体。</li>
+</ol>
+<ul>
+<li>售达方：提出销售订单请求的一方或客户</li>
+<li>送达方：接受交货或服务的一方或客户</li>
+<li>收票方：接受发票的一方或客户</li>
+<li>付款方：负责发票付款的一方或客户<br>特殊的客户主记录</li>
+<li>公司间客户</li>
+<li>一次性客户</li>
+</ul>
+<ol>
+<li>账户组：用于确定哪些字段必输，哪些字段关闭</li>
+</ol>
+<ul>
+<li>复制已有账户组</li>
+<li>更改客户账户组的数据<ul>
+<li>通用数据</li>
+<li>公司代码数据</li>
+<li>销售数据</li>
+</ul>
+</li>
+<li>设定所需字段，属性<ul>
+<li>Displayed Only</li>
+<li>Suppressed Only</li>
+<li>Optional Entry</li>
+<li>Required Entry</li>
+</ul>
+</li>
+<li>将账户组分配到许可编号清单中</li>
+</ul>
+<ol>
+<li>客户主数据的特性：</li>
+</ol>
+<ul>
+<li>公司代码数据应用于一个公司代码</li>
+<li>SD数据应用于一个销售区域</li>
+<li>不管选择的是何种公司代码或销售区域，基本数据都相同</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/f869fbf2.html" data-id="cjd5oz5bu005ankvthidr6k6q" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.2、编号范围" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/3e30a76d.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/3e30a76d.html">3.2、编号范围</a>
     </h1>
   
 
@@ -339,7 +244,7 @@
 <li>编号范围也可以用于主数据对象</li>
 </ul>
 <ol>
-<li><p>菜单路径<br> spro-&gt;sales and distribution -&gt;master data-&gt;item proposal -&gt;define number ranges for item propsals<br><img src="/blog/images/SAP销售与分销实施指南/图3.2_1.png" alt="定义项目建议的编号范围" title="定义项目建议的编号范围"></p>
+<li><p>菜单路径<br> spro-&gt;sales and distribution -&gt;master data-&gt;item proposal -&gt;define number ranges for item propsals<br><img src="/images/SAP销售与分销实施指南/图3.2_1.png" alt="定义项目建议的编号范围" title="定义项目建议的编号范围"></p>
 <p>定义编号间隔范围。  </p>
 </li>
 <li>要创建新的编号范围，业务需求先得准确，需要定义足够大的编号范围。</li>
@@ -360,62 +265,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/3e30a76d.html" data-id="cjd5om7ky005d5gvtzdq1mmxs" class="article-share-link">Share</a>
+      <a data-url="https://sddysz.cn/3e30a76d.html" data-id="cjd5oz5bu005dnkvtpfab2aj9" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.3、行项目建议" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/3c549318.html" class="article-date">
-  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/3c549318.html">3.3、行项目建议（产品组合建议）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="3-3、行项目建议（产品组合建议）"><a href="#3-3、行项目建议（产品组合建议）" class="headerlink" title="3.3、行项目建议（产品组合建议）"></a>3.3、行项目建议（产品组合建议）</h4><ul>
-<li>行项目建议：是通常基于客户而组织在一起的物料和订单数量的清单。</li>
-<li>行项目建议特定与销售区域，可以在生成销售订单的时候来参照。</li>
-</ul>
-<p><strong>配置路径</strong>:</p>
-<ul>
-<li>spro-&gt;sales and distribution -&gt;master data-&gt;item proposal-&gt;define item proposal types。</li>
-<li>【VOV8】<br>凭证类型 PV-Item Proposal</li>
-</ul>
-<p>行项目建议可能是相关项目，也可能是无关项目。<br>行项目建议与销售BOM不同。—–后续验证?????????</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/3c549318.html" data-id="cjd5om7ky005g5gvtn2nnoqox" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
 
     </footer>
   </div>
@@ -426,12 +279,12 @@
   
     <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.4、凭证类型" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/252daea0.html" class="article-date">
+    <a href="/252daea0.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
   </div>
 
   </div>
@@ -442,7 +295,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/252daea0.html">3.4、销售凭证类型</a>
+      <a class="article-title" href="/252daea0.html">3.4、销售凭证类型</a>
     </h1>
   
 
@@ -465,7 +318,7 @@
 <li>复制或创建新的凭证类型时，必须以Z或Y开头。</li>
 </ul>
 <p>销售凭证类型相关字段的含义：<br><strong>凭证类型字段详解</strong></p>
-<p><img src="/blog/images/SAP销售与分销实施指南/图3.3_1.png" alt="定义销售凭证类型" title="定义销售凭证类型"></p>
+<p><img src="/images/SAP销售与分销实施指南/图3.3_1.png" alt="定义销售凭证类型" title="定义销售凭证类型"></p>
 <ul>
 <li>凭证类别：SAP中预设的，不能添加。控制着系统的行为。  —–需要测试其他类型？？？？<ul>
 <li>A – 询价</li>
@@ -585,10 +438,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/252daea0.html" data-id="cjd5om7ky005j5gvtyityow47" class="article-share-link">Share</a>
+      <a data-url="https://sddysz.cn/252daea0.html" data-id="cjd5oz5bu005gnkvtvejc450b" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
 
     </footer>
   </div>
@@ -599,12 +452,12 @@
   
     <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.5、项目类别和确定过程" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/1775e7d2.html" class="article-date">
+    <a href="/1775e7d2.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
   </div>
 
   </div>
@@ -615,7 +468,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/1775e7d2.html">3.5、销售订单项目类别和确定过程</a>
+      <a class="article-title" href="/1775e7d2.html">3.5、销售订单项目类别和确定过程</a>
     </h1>
   
 
@@ -730,10 +583,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/1775e7d2.html" data-id="cjd5om7ky005m5gvtyq3735jf" class="article-share-link">Share</a>
+      <a data-url="https://sddysz.cn/1775e7d2.html" data-id="cjd5oz5bu005jnkvtx51er103" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
 
     </footer>
   </div>
@@ -742,14 +595,14 @@
 
 
   
-    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.6、计划行类别" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.3、行项目建议" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/af3e60fd.html" class="article-date">
+    <a href="/3c549318.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
   </div>
 
   </div>
@@ -760,7 +613,59 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/af3e60fd.html">3.6、计划行类别</a>
+      <a class="article-title" href="/3c549318.html">3.3、行项目建议（产品组合建议）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-3、行项目建议（产品组合建议）"><a href="#3-3、行项目建议（产品组合建议）" class="headerlink" title="3.3、行项目建议（产品组合建议）"></a>3.3、行项目建议（产品组合建议）</h4><ul>
+<li>行项目建议：是通常基于客户而组织在一起的物料和订单数量的清单。</li>
+<li>行项目建议特定与销售区域，可以在生成销售订单的时候来参照。</li>
+</ul>
+<p><strong>配置路径</strong>:</p>
+<ul>
+<li>spro-&gt;sales and distribution -&gt;master data-&gt;item proposal-&gt;define item proposal types。</li>
+<li>【VOV8】<br>凭证类型 PV-Item Proposal</li>
+</ul>
+<p>行项目建议可能是相关项目，也可能是无关项目。<br>行项目建议与销售BOM不同。—–后续验证?????????</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/3c549318.html" data-id="cjd5oz5ca005mnkvt7brt945h" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.6、计划行类别" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/af3e60fd.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/af3e60fd.html">3.6、计划行类别</a>
     </h1>
   
 
@@ -817,10 +722,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/af3e60fd.html" data-id="cjd5om7ky005p5gvtaet41iaq" class="article-share-link">Share</a>
+      <a data-url="https://sddysz.cn/af3e60fd.html" data-id="cjd5oz5ca005pnkvtxekdhs48" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
 
     </footer>
   </div>
@@ -829,14 +734,14 @@
 
 
   
-    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.8、特殊销售凭证" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.7、复制控制" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/9312c712.html" class="article-date">
+    <a href="/2fe0931f.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
   </div>
 
   </div>
@@ -847,7 +752,109 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/9312c712.html">3.8特殊销售凭证</a>
+      <a class="article-title" href="/2fe0931f.html">3.7、复制控制</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="3-7、复制控制"><a href="#3-7、复制控制" class="headerlink" title="3.7、复制控制"></a>3.7、复制控制</h4><p>系统使用复制控制来确定凭证类型、项目类别和计划行类别(销售订单的三层数据)相互复制。</p>
+<ol>
+<li>对于销售凭证   </li>
+</ol>
+<ul>
+<li>使用本选项控制合同、报价及订单间的复制</li>
+<li>SAP IMG-&gt; sales and distribution-&gt;sales-&gt;maintain copy control for sales documents<ul>
+<li>销售凭证到销售凭证复制【VTAA】</li>
+<li>出具发票单据到销售单据【VTAF】</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>对于交货凭证</li>
+</ol>
+<ul>
+<li>控制从销售订单到交货的复制</li>
+<li>SAP IMG-&gt;Logistics Execution -&gt; Shipping-&gt;Copying Control</li>
+<li>【VTLA】</li>
+</ul>
+<ol>
+<li>对于开票凭证</li>
+</ol>
+<ul>
+<li>控制从销售订单或交货到开票凭证的复制</li>
+<li>SAP IMG-&gt; sales and distribution -&gt; billing-&gt;billing documents-&gt;maintain copying control for billing documents<ul>
+<li>订单到开票【VTFA】</li>
+<li>交货到开票【VTFL】</li>
+<li>开票到开票【VTFF】</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>销售凭证的复制控制<br>用于参照另一个销售凭证来创建某个销售凭证。<br>【vofm】</li>
+</ol>
+<ul>
+<li>抬头复制配置<ul>
+<li>源类型/目标类型：</li>
+<li>复制需求：检查复制发生前必须满足的规则/标准</li>
+<li>传输例程：复制传输数据使用的例程<ul>
+<li>复制数据传送VBAK的请求</li>
+<li>复制传递业务数据的请求</li>
+<li>为合作伙伴数据VBPA复制需求</li>
+</ul>
+</li>
+<li>复制项目编号：复制项目编号还是重新编序</li>
+<li>完全参照：限定用户复制整个凭证</li>
+</ul>
+</li>
+<li>项目复制配置<ul>
+<li>源凭证类型、项目类别，目标凭证类型、项目类别</li>
+<li>复制需求：</li>
+<li>传输例程</li>
+<li>FPLA：检查开票计划是否满足的例程</li>
+<li>复制计划行：</li>
+<li>更新凭证流：强制系统创建凭证流记录</li>
+<li></li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/2fe0931f.html" data-id="cjd5oz5ca005snkvt4f5wcboa" class="article-share-link">Teilen</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.8、特殊销售凭证" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/9312c712.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/9312c712.html">3.8特殊销售凭证</a>
     </h1>
   
 
@@ -931,112 +938,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/9312c712.html" data-id="cjd5om7ky005s5gvtyjzzen2y" class="article-share-link">Share</a>
+      <a data-url="https://sddysz.cn/9312c712.html" data-id="cjd5oz5ca005vnkvt1htkej6t" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.7、复制控制" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/blog/2fe0931f.html" class="article-date">
-  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/blog/2fe0931f.html">3.7、复制控制</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="3-7、复制控制"><a href="#3-7、复制控制" class="headerlink" title="3.7、复制控制"></a>3.7、复制控制</h4><p>系统使用复制控制来确定凭证类型、项目类别和计划行类别(销售订单的三层数据)相互复制。</p>
-<ol>
-<li>对于销售凭证   </li>
-</ol>
-<ul>
-<li>使用本选项控制合同、报价及订单间的复制</li>
-<li>SAP IMG-&gt; sales and distribution-&gt;sales-&gt;maintain copy control for sales documents<ul>
-<li>销售凭证到销售凭证复制【VTAA】</li>
-<li>出具发票单据到销售单据【VTAF】</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>对于交货凭证</li>
-</ol>
-<ul>
-<li>控制从销售订单到交货的复制</li>
-<li>SAP IMG-&gt;Logistics Execution -&gt; Shipping-&gt;Copying Control</li>
-<li>【VTLA】</li>
-</ul>
-<ol>
-<li>对于开票凭证</li>
-</ol>
-<ul>
-<li>控制从销售订单或交货到开票凭证的复制</li>
-<li>SAP IMG-&gt; sales and distribution -&gt; billing-&gt;billing documents-&gt;maintain copying control for billing documents<ul>
-<li>订单到开票【VTFA】</li>
-<li>交货到开票【VTFL】</li>
-<li>开票到开票【VTFF】</li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>销售凭证的复制控制<br>用于参照另一个销售凭证来创建某个销售凭证。<br>【vofm】</li>
-</ol>
-<ul>
-<li>抬头复制配置<ul>
-<li>源类型/目标类型：</li>
-<li>复制需求：检查复制发生前必须满足的规则/标准</li>
-<li>传输例程：复制传输数据使用的例程<ul>
-<li>复制数据传送VBAK的请求</li>
-<li>复制传递业务数据的请求</li>
-<li>为合作伙伴数据VBPA复制需求</li>
-</ul>
-</li>
-<li>复制项目编号：复制项目编号还是重新编序</li>
-<li>完全参照：限定用户复制整个凭证</li>
-</ul>
-</li>
-<li>项目复制配置<ul>
-<li>源凭证类型、项目类别，目标凭证类型、项目类别</li>
-<li>复制需求：</li>
-<li>传输例程</li>
-<li>FPLA：检查开票计划是否满足的例程</li>
-<li>复制计划行：</li>
-<li>更新凭证流：强制系统创建凭证流记录</li>
-<li></li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/2fe0931f.html" data-id="cjd5om7le005v5gvtv81ybwuh" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
 
     </footer>
   </div>
@@ -1047,12 +952,12 @@
   
     <article id="post-Reading_Notes/SAP销售与分销实施指南/4、合同与特殊流程/4.1、数量合同" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/blog/79c51bcc.html" class="article-date">
+    <a href="/79c51bcc.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/blog/categories/SAP/">SAP</a>►<a class="article-category-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
+    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
   </div>
 
   </div>
@@ -1063,7 +968,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/blog/79c51bcc.html">4.1、数量合同</a>
+      <a class="article-title" href="/79c51bcc.html">4.1、数量合同</a>
     </h1>
   
 
@@ -1075,10 +980,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/blog/79c51bcc.html" data-id="cjd5om7le005y5gvtzf3xklc2" class="article-share-link">Share</a>
+      <a data-url="https://sddysz.cn/79c51bcc.html" data-id="cjd5oz5ca005ynkvt6levopo7" class="article-share-link">Teilen</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/SD/">SD</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
 
     </footer>
   </div>
@@ -1091,7 +996,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/blog/page/3/">&laquo; Prev</a><a class="page-number" href="/blog/">1</a><a class="page-number" href="/blog/page/2/">2</a><a class="page-number" href="/blog/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/blog/page/5/">5</a><a class="extend next" rel="next" href="/blog/page/5/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/page/3/">&laquo; zurück</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/5/">weiter &raquo;</a>
   </nav>
 
 </section>
@@ -1100,9 +1005,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
+    <h3 class="widget-title">Kategorien</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/SAP/">SAP</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/SAP/PA-SD教程/">PA-SD教程</a></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/office/">office</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/blog/categories/office/ppt/">ppt</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/blog/categories/读书笔记/">读书笔记</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/">SAP</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/PA-SD教程/">PA-SD教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/office/">office</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/office/ppt/">ppt</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a></li></ul>
     </div>
   </div>
 
@@ -1112,7 +1017,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/PA教程/">PA教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SAP/">SAP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/SD/">SD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/office/">office</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/ppt/">ppt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/小说/">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/blog/tags/读书/">读书</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/PA教程/">PA教程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SAP/">SAP</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SD/">SD</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/office/">office</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ppt/">ppt</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/小说/">小说</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/读书/">读书</a></li></ul>
     </div>
   </div>
 
@@ -1122,16 +1027,16 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/blog/tags/PA教程/" style="font-size: 16.67px;">PA教程</a> <a href="/blog/tags/SAP/" style="font-size: 20px;">SAP</a> <a href="/blog/tags/SD/" style="font-size: 20px;">SD</a> <a href="/blog/tags/office/" style="font-size: 13.33px;">office</a> <a href="/blog/tags/ppt/" style="font-size: 13.33px;">ppt</a> <a href="/blog/tags/小说/" style="font-size: 10px;">小说</a> <a href="/blog/tags/读书/" style="font-size: 10px;">读书</a>
+      <a href="/tags/PA教程/" style="font-size: 16.67px;">PA教程</a> <a href="/tags/SAP/" style="font-size: 20px;">SAP</a> <a href="/tags/SD/" style="font-size: 20px;">SD</a> <a href="/tags/office/" style="font-size: 13.33px;">office</a> <a href="/tags/ppt/" style="font-size: 13.33px;">ppt</a> <a href="/tags/小说/" style="font-size: 10px;">小说</a> <a href="/tags/读书/" style="font-size: 10px;">读书</a>
     </div>
   </div>
 
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
+    <h3 class="widget-title">Archiv</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/blog/archives/2018/02/">February 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
   </div>
 
@@ -1139,28 +1044,28 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
+    <h3 class="widget-title">letzter Beitrag</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/blog/91ea59ef.html">销售组织机构特征对比</a>
+            <a href="/91ea59ef.html">销售组织机构特征对比</a>
           </li>
         
           <li>
-            <a href="/blog/3fd54d83.html">销售与分销模块笔记</a>
+            <a href="/3fd54d83.html">销售与分销模块笔记</a>
           </li>
         
           <li>
-            <a href="/blog/c3d1f900.html">一、幻灯片设计前的内容梳理</a>
+            <a href="/f76ce67d.html">三、动画在幻灯片中的3大作用</a>
           </li>
         
           <li>
-            <a href="/blog/15a628d8.html">五、关于模板</a>
+            <a href="/f0fb456d.html">四、幻灯片美化设计</a>
           </li>
         
           <li>
-            <a href="/blog/f76ce67d.html">三、动画在幻灯片中的3大作用</a>
+            <a href="/88a11e18.html">二、幻灯片操作术</a>
           </li>
         
       </ul>
@@ -1183,9 +1088,9 @@
     </div>
     <nav id="mobile-nav">
   
-    <a href="/blog/" class="mobile-nav-link">Home</a>
+    <a href="/" class="mobile-nav-link">Home</a>
   
-    <a href="/blog/archives" class="mobile-nav-link">Archives</a>
+    <a href="/archives" class="mobile-nav-link">Archives</a>
   
 </nav>
     
@@ -1193,11 +1098,11 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.css">
-  <script src="/blog/fancybox/jquery.fancybox.pack.js"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/blog/js/script.js"></script>
+<script src="/js/script.js"></script>
 
 
 
