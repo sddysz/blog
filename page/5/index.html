@@ -55,7 +55,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sddysz.cn"></form>
@@ -66,9 +66,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Reading_Notes/SAP销售与分销实施指南/5、可供销售货量与需求传输/5.1、物料确定" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Reading_Notes/SAP销售与分销实施指南/3、销售凭证/3.7、复制控制" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/f802240f.html" class="article-date">
+    <a href="/2fe0931f.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
@@ -84,7 +84,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/f802240f.html">5.1、物料确定</a>
+      <a class="article-title" href="/2fe0931f.html">3.7、复制控制</a>
     </h1>
   
 
@@ -92,26 +92,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="5-1、物料确定"><a href="#5-1、物料确定" class="headerlink" title="5.1、物料确定"></a>5.1、物料确定</h3><ol>
-<li>当条件满足时，物料确定功能会将销售订单中的某中物料替换成另一种。</li>
-</ol>
-<p>使用场景：在某段时间内自动调换企业的某项产品，例如圣诞期间使用特殊包装的产品</p>
+        <h4 id="3-7、复制控制"><a href="#3-7、复制控制" class="headerlink" title="3.7、复制控制"></a>3.7、复制控制</h4><p>系统使用复制控制来确定凭证类型、项目类别和计划行类别(销售订单的三层数据)相互复制。</p>
 <ol>
-<li>物料确定配置过程</li>
+<li>对于销售凭证   </li>
 </ol>
 <ul>
-<li>维护物料确定的先决条件<ul>
-<li>SAP IMG –销售与分销–基本功能–物料确定–维护物料确定的先决条件    </li>
+<li>使用本选项控制合同、报价及订单间的复制</li>
+<li>SAP IMG-&gt; sales and distribution-&gt;sales-&gt;maintain copy control for sales documents<ul>
+<li>销售凭证到销售凭证复制【VTAA】</li>
+<li>出具发票单据到销售单据【VTAF】</li>
 </ul>
 </li>
-<li>定义条件类型 OV12</li>
-<li>定义存取顺序 </li>
+</ul>
+<ol>
+<li>对于交货凭证</li>
+</ol>
+<ul>
+<li>控制从销售订单到交货的复制</li>
+<li>SAP IMG-&gt;Logistics Execution -&gt; Shipping-&gt;Copying Control</li>
+<li>【VTLA】</li>
+</ul>
+<ol>
+<li>对于开票凭证</li>
+</ol>
+<ul>
+<li>控制从销售订单或交货到开票凭证的复制</li>
+<li>SAP IMG-&gt; sales and distribution -&gt; billing-&gt;billing documents-&gt;maintain copying control for billing documents<ul>
+<li>订单到开票【VTFA】</li>
+<li>交货到开票【VTFL】</li>
+<li>开票到开票【VTFF】</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>销售凭证的复制控制<br>用于参照另一个销售凭证来创建某个销售凭证。<br>【vofm】</li>
+</ol>
+<ul>
+<li>抬头复制配置<ul>
+<li>源类型/目标类型：</li>
+<li>复制需求：检查复制发生前必须满足的规则/标准</li>
+<li>传输例程：复制传输数据使用的例程<ul>
+<li>复制数据传送VBAK的请求</li>
+<li>复制传递业务数据的请求</li>
+<li>为合作伙伴数据VBPA复制需求</li>
+</ul>
+</li>
+<li>复制项目编号：复制项目编号还是重新编序</li>
+<li>完全参照：限定用户复制整个凭证</li>
+</ul>
+</li>
+<li>项目复制配置<ul>
+<li>源凭证类型、项目类别，目标凭证类型、项目类别</li>
+<li>复制需求：</li>
+<li>传输例程</li>
+<li>FPLA：检查开票计划是否满足的例程</li>
+<li>复制计划行：</li>
+<li>更新凭证流：强制系统创建凭证流记录</li>
+<li></li>
+</ul>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/f802240f.html" data-id="cjd5oz5ca0061nkvtlvsr2o8r" class="article-share-link">Teilen</a>
+      <a data-url="https://sddysz.cn/2fe0931f.html" data-id="cjd6rp06g005y1ovtrvyvn4vc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
@@ -127,7 +172,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/page/4/">&laquo; zurück</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+    <a class="extend prev" rel="prev" href="/page/4/">&laquo; Prev</a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
   </nav>
 
 </section>
@@ -136,7 +181,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Kategorien</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/">SAP</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/PA-SD教程/">PA-SD教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/office/">office</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/office/ppt/">ppt</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a></li></ul>
     </div>
@@ -165,7 +210,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -175,12 +220,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/91ea59ef.html">销售组织机构特征对比</a>
+            <a href="/18373593.html">分销渠道配置</a>
           </li>
         
           <li>
@@ -188,15 +233,15 @@
           </li>
         
           <li>
-            <a href="/f76ce67d.html">三、动画在幻灯片中的3大作用</a>
-          </li>
-        
-          <li>
-            <a href="/f0fb456d.html">四、幻灯片美化设计</a>
+            <a href="/af053278.html">《百年孤独》读书笔记</a>
           </li>
         
           <li>
             <a href="/88a11e18.html">二、幻灯片操作术</a>
+          </li>
+        
+          <li>
+            <a href="/15a628d8.html">五、关于模板</a>
           </li>
         
       </ul>

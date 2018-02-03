@@ -55,7 +55,7 @@
         
           <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Suche"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://sddysz.cn"></form>
@@ -66,9 +66,9 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-SAP/组织架构/组织机构对比" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-SAP/组织架构/分销渠道配置" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/91ea59ef.html" class="article-date">
+    <a href="/18373593.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
@@ -84,7 +84,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/91ea59ef.html">销售组织机构特征对比</a>
+      <a class="article-title" href="/18373593.html">分销渠道配置</a>
     </h1>
   
 
@@ -92,101 +92,30 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="销售组织机构特征对比"><a href="#销售组织机构特征对比" class="headerlink" title="销售组织机构特征对比"></a>销售组织机构特征对比</h1><table>
-<thead>
-<tr>
-<th>机构</th>
-<th>代码位数</th>
-<th>分配机构</th>
-<th>分配关系</th>
-<th>表</th>
-<th>说明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>公司代码</td>
-<td>4</td>
-<td>集团</td>
-<td>1:n</td>
-<td>T001-BUKRS</td>
-<td></td>
-</tr>
-<tr>
-<td>销售组织</td>
-<td>4</td>
-<td>公司代码</td>
-<td>1:n</td>
-<td>TVKO-VKORG</td>
-<td>TVKO-BUKRS关联公司代码</td>
-</tr>
-<tr>
-<td>分销渠道</td>
-<td>2</td>
-<td>销售组织</td>
-<td>1:n</td>
-<td>TVTW-VTWEG</td>
-<td>TVKOV-VKORG=TVKO-VKORG</td>
-</tr>
-<tr>
-<td>产品组</td>
-<td>2</td>
-<td>销售组织</td>
-<td>n:n</td>
-<td>TSPA-SPART</td>
-<td>TVKOS表销售组织-产品组关联</td>
-</tr>
-<tr>
-<td>销售区域</td>
-<td></td>
-<td></td>
-<td></td>
-<td>TVTA</td>
-<td>销售组织-分销渠道-产品组关联</td>
-</tr>
-<tr>
-<td>销售办公室</td>
-<td>4</td>
-<td>销售区域</td>
-<td>n:n</td>
-<td>TVBUR-VKBUR</td>
-<td>TVKBZ关联，（销售组织-分销渠道-产品组）-销售办公室</td>
-</tr>
-<tr>
-<td>销售组</td>
-<td>3</td>
-<td>销售办公室</td>
-<td>n:n</td>
-<td>TVKGR-VKGRP</td>
-<td>TVBVK关联，销售办公室-销售组</td>
-</tr>
-<tr>
-<td>工厂</td>
-<td>4</td>
-<td>销售组织-分销渠道</td>
-<td>n:n</td>
-<td>T001W-WERKS</td>
-<td>TVKWZ关联，销售组织-分销渠道-工厂</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
+        <h1 id="分销渠道配置"><a href="#分销渠道配置" class="headerlink" title="分销渠道配置"></a>分销渠道配置</h1><h3 id="一、分销渠道定义"><a href="#一、分销渠道定义" class="headerlink" title="一、分销渠道定义"></a>一、分销渠道定义</h3><ol>
+<li>SPRO进入IMG</li>
+<li>企业结构=》定义=》销售与分销=》定义，复制，删除，检查分销渠道</li>
+<li>进入分销渠道列表</li>
+<li>定义新的分销渠道<br><img src="/images/SAP/组织架构/更改视图_分销渠道_概览.png" alt="更改视图_分销渠道_概览" title="更改视图_分销渠道_概览"></li>
+</ol>
 <ul>
-<li>工厂-公司代码关联，是通过公司代码-评估范围（T001K）-估价范围（TASSIGN_MM_T001W）-工厂</li>
-<li>销售组织、产品组、销售办公室、销售组直接定义在集团下</li>
-<li>通过中间表关联查询得到关系</li>
+<li>分销渠道使用两位编码，可用数字和字母</li>
+</ul>
+<h3 id="二、分销渠道-销售组织分配"><a href="#二、分销渠道-销售组织分配" class="headerlink" title="二、分销渠道-销售组织分配"></a>二、分销渠道-销售组织分配</h3><ol>
+<li>SPRO进入IMG</li>
+<li>企业结构=》分配=》销售与分销=》给销售组织分配分销渠道</li>
+<li>选择销售组织和分销渠道<br><img src="/images/SAP/组织架构/更改视图_分配销售组织-分销渠道.png" alt="更改视图_分配销售组织-分销渠道" title="更改视图_分配销售组织-分销渠道"></li>
+</ol>
+<ul>
+<li>一个分销渠道可以分配给多个销售组织</li>
+<li>多个分销渠道可以分配给一个销售组织</li>
+<li>销售组织和分销渠道为多对多关系</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/91ea59ef.html" data-id="cjd5oz5aj001wnkvttnzpupr8" class="article-share-link">Teilen</a>
+      <a data-url="https://sddysz.cn/18373593.html" data-id="cjd6rp04g001w1ovtz1673lm5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PA教程/">PA教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
@@ -254,7 +183,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/3fd54d83.html" data-id="cjd5oz57x0000nkvtcfreplfh" class="article-share-link">Teilen</a>
+      <a data-url="https://sddysz.cn/3fd54d83.html" data-id="cjd6rp01z00001ovtlpi21gro" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PA教程/">PA教程</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
@@ -266,9 +195,78 @@
 
 
   
-    <article id="post-Reading_Notes/PPT设计思维/3、动画在幻灯片中的3大作用" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Reading_Notes/百年孤独/百年孤独阅读笔记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/f76ce67d.html" class="article-date">
+    <a href="/af053278.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/读书笔记/">读书笔记</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/af053278.html">《百年孤独》读书笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="《百年孤独》读书笔记"><a href="#《百年孤独》读书笔记" class="headerlink" title="《百年孤独》读书笔记"></a>《百年孤独》读书笔记</h1><blockquote>
+<p>家族的第一个人被捆在树上，最后一个人正被蚂蚁吃掉。</p>
+<p>作者：加夫列尔·加西亚·马尔克斯<br>国家：哥伦比亚<br>1967年首版<br>1982年获得诺贝尔文学奖<br>2011年中国首次出版<br>2015年6月购入，2017年9月读完</p>
+</blockquote>
+<h3 id="读书经历"><a href="#读书经历" class="headerlink" title="读书经历"></a>读书经历</h3><p>很久之前就已经买了这本极好的书，只是一直没有发现好在什么地方。忘记了是2015年还是2016年看了大约50页，然后被里面相似的名字搞的迷糊了，就直接放下，再也没碰。直到后来将书给了刘婷婷，她竟然看完了，还画了一张布恩迪亚家族的图谱。今年进入项目之后，也买了几本书，但是之前的这本还没有看完，于是拿着刘婷婷画好的图谱开始从头看，越看越觉得好看，就在周末的抽时间看完了。</p>
+<p>在读《百年孤独》之前，已经读过了莫言的《丰乳肥臀》，对莫言的魔幻主义写法折服，感觉写的非常好。在翻看《丰乳肥臀》的书评的过程中，了解到这种写法也是出自卡夫卡的荒诞式小说写法，而《丰乳肥臀》与《百年孤独》更是非常的相似。在我看来也许可以说《丰乳肥臀》是“中国版的百年孤独”。乌苏拉尔与上官鲁氏都是支撑整个家族的女性，家族中的每个人都没有很好的下场，小说也都映射了所描述的历史背景。在不了解哥伦比亚历史的情况下，无法读出小说中的各种事件是如何映射现实的，但是这并不重要，并不影响我对《百年孤独》的评价。</p>
+<h3 id="内容描述"><a href="#内容描述" class="headerlink" title="内容描述"></a>内容描述</h3><p>《百年孤独》描述了布恩迪亚家族从建立马孔多到马孔多无限繁荣再到马孔多消亡的故事线，大约有160-170年的时间。何塞·阿尔卡蒂奥为了逃避生出猪尾巴后代而代领21个家庭离开家乡，在遥远的地方建立了马孔多。在梅赛德斯发现马孔多并留下羊皮卷手记后，布恩迪亚家族的男性开始发疯，出现了两种男性————阿尔卡蒂奥与奥雷里亚诺。这个家族中的每个男性都继承了这两个名字中的一个，所有叫阿尔卡蒂奥的男性都顽固、疯狂、充满激情，而所有叫奥雷里亚诺的男性都沉着冷静、善于观察、孤独。在后续的一百多年中，布恩迪亚家族随着马孔多的不断发展变得富有、声名显赫，也在香蕉公司的进入后开始没落，并在第七代的诞生中毁灭。</p>
+<p>书中有几个刻画较多的历史节点，奥雷里亚诺上校领导反动派的革命，映射了拉美国家的独立战争；战后火车、发电机等进入马孔多，香蕉公司随之而来，映射了工业革命给哥伦比亚带来的影响；大罢工中的大屠杀，据说历史中也确有其事；布恩迪亚家族和马孔多的没落，也许就是映射了工业革命繁荣后的萧条。</p>
+<h3 id="感想"><a href="#感想" class="headerlink" title="感想"></a>感想</h3><p>给我印象最深的是最后羊皮卷中的第一句被破译的文字“<em>家族的第一个人被捆在树上，最后一个人正被蚂蚁吃掉。</em>”。这是梅赛德斯送给这个家族的礼物，却是预言了整个家族的历史，而这个已经写好的命运只在最后的毁灭中才被破译。看到这里的时候感觉到的一种恐怖，自己的命运被其他人完全掌控的那种感觉，自己无限努力的争取自己命运，却发现有人早已将自己的命运写完了，还没法反抗的那种感觉。</p>
+<p>读完的时候我告诉刘婷婷，我没看懂。对于《丰乳肥臀》我还能明白的更多，毕竟更了解中国历史和国情。对于《百年孤独》，更多的是从各种书评中搜集他人对这本书的评价。</p>
+<ul>
+<li><p>父与母<br>何塞·阿尔卡蒂奥一直想带领马孔多居民发现新的文明，而真正将现代文明带入马孔多的是乌苏拉尔。布恩迪亚家族中的男性一直在毁灭，破坏整个家庭，而支撑起家族的确实乌苏拉尔。</p>
+</li>
+<li><p>男性的缺点</p>
+</li>
+</ul>
+<p>家族中的男性代表了人类中所有男性的缺点：</p>
+<blockquote>
+<p>虽然探寻到一些科学真理（如圆形地形说等），但同时也陷入了崇尚经济利益（炼金术）、暴力（发明武器）、征服（认识世界奇迹）等欲望中。至始，他的男性子孙们发展了始祖种种想象阶段的幻欲，承载了男性征服自然世界的各种欲望：放纵生理欲望（第二代何塞·阿尔卡蒂奥和第四代奥雷里亚诺第二）、崇尚暴力战争（第二代奥雷里亚诺）、权利无限的统治欲（第三代何塞·阿尔卡蒂奥）、实业建设的创造欲（第三代奥雷里亚诺·特里斯特修铁路，奥雷里亚诺·森特诺制冰）、强烈的反抗性（第四代何塞·阿尔卡蒂奥第二陷入人类“崇高”劳动中又为重获人权而罢工）、精神寄托的依赖性（第五代何塞·阿尔卡蒂奥依靠宗教寻求解脱）、强烈的求知性（第六代奥雷里亚诺）等。</p>
+</blockquote>
+<ul>
+<li>命运</li>
+</ul>
+<blockquote>
+<p>家族中男性成员都只有两种归宿：一是死于非命，一是陷入不能自拔的孤独中退化。这里的“死于非命”，虽不是死于己手，却是死于整个男性欲望在现实中的交合（如战争、暴力），这也是男性自我戕害的象征。能逃出暴力劫数的人却逃不脱“孤独”。</p>
+</blockquote>
+<p>我并未完全懂的这本书，后面的感想也是摘抄来的，只是我感觉这里说的很对。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/af053278.html" data-id="cjd6rp035000c1ovt2zk83niy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/小说/">小说</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/读书/">读书</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/PPT设计思维/2、幻灯片操作术" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/88a11e18.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
@@ -284,7 +282,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/f76ce67d.html">三、动画在幻灯片中的3大作用</a>
+      <a class="article-title" href="/88a11e18.html">二、幻灯片操作术</a>
     </h1>
   
 
@@ -292,58 +290,574 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="动画在幻灯片中的3大作用"><a href="#动画在幻灯片中的3大作用" class="headerlink" title="动画在幻灯片中的3大作用"></a>动画在幻灯片中的3大作用</h1><h3 id="3-1认识幻灯片动画"><a href="#3-1认识幻灯片动画" class="headerlink" title="3.1认识幻灯片动画"></a>3.1认识幻灯片动画</h3><ul>
-<li><p>切换与动画</p>
+        <h1 id="幻灯片操作术"><a href="#幻灯片操作术" class="headerlink" title="幻灯片操作术"></a>幻灯片操作术</h1><ul>
+<li>形状</li>
+<li>文字</li>
+<li>图片</li>
+<li>音频</li>
+<li>视频</li>
+<li>字符</li>
+<li>层级</li>
+<li>对齐</li>
+<li>格式刷</li>
+<li>参考线</li>
+<li>背景</li>
+<li>尺寸</li>
+<li>条理</li>
+<li>图表</li>
+</ul>
+<h3 id="2-1形状"><a href="#2-1形状" class="headerlink" title="2.1形状"></a>2.1形状</h3><p>形状的作用</p>
 <ul>
-<li>切换：页面与页面间过渡的动态效果</li>
-<li>动画：单独页面元素的动态效果</li>
+<li>绘图<ul>
+<li>通过形状的组合，绘制矢量图</li>
 </ul>
 </li>
-<li><p>模拟物理世界的动作效果</p>
+<li>突出重点内容<ul>
+<li>色差反衬，给关键字加上形状的背景色</li>
+<li>半透明背景，在图片上清晰地显示文字，同时显示图片和文字</li>
+</ul>
+</li>
+<li>规整化不统一元素<ul>
+<li>外层套形状，例如将大小不一的logo套上同样大小的形状。</li>
+<li>相近内容归类，将关联的内容放入同一个形状中。</li>
+</ul>
+</li>
+<li>表达内容见逻辑关系（smartArt）<ul>
+<li>并列</li>
+<li>层级</li>
+<li>循环</li>
+<li>因果</li>
+</ul>
+</li>
+<li><p>表达抽象概念</p>
 <ul>
-<li>例如：翻页、压缩、推进、折断等内置动作。</li>
-<li>设定元素的动画效果时，要 <em>符合</em> 动画背后所模拟的动作。</li>
-<li>不要使用无关的动画效果</li>
-</ul>
-</li>
-<li>用来吸引注意力<ul>
-<li>使用动态变化或发生变化的元素，将观众的吸引力放在目标内容上</li>
-<li>强调动画</li>
-</ul>
-</li>
-<li>使元素间隔显示<ul>
-<li>同一页内容分批显示</li>
-<li>用到哪个显示哪个</li>
-<li>观众的注意力不会被后面的内容吸引</li>
-<li>显示后面的内容时，可以将前面的透明/虚化，最后再全部显示</li>
-</ul>
-</li>
-<li>动画使用常犯错误<ul>
-<li>使用过多的动画<ul>
-<li>过多的动画会转移观众的注意力，会延长演讲的时间</li>
-<li>动画一定是为了内容演示</li>
-</ul>
-</li>
-<li>动画效果不一致<ul>
-<li>同一页面的动画最好能使用同一种，看起来更整齐</li>
-</ul>
-</li>
-<li>动画过于复杂<ul>
-<li>复杂的动画需要付出大量的时间成本</li>
-<li>动画太炫会分散观众对内容的解读</li>
-<li>PPT不是专业的动画软件<h3 id="3-2-动画刷"><a href="#3-2-动画刷" class="headerlink" title="3.2 动画刷"></a>3.2 动画刷</h3></li>
+<li>形象化小图标，</li>
+<li>形状间布尔运算<ul>
+<li>加法</li>
+<li>减法</li>
+<li>拆分</li>
+<li>相交</li>
+<li>剪除<h3 id="2-2文字"><a href="#2-2文字" class="headerlink" title="2.2文字"></a>2.2文字</h3></li>
 </ul>
 </li>
 </ul>
 </li>
-<li>类似于格式刷</li>
-<li>将同样的动画应用于多个其他元素</li>
+<li><p>大段文字</p>
+<ul>
+<li>字体，无衬线字体。</li>
+<li>行间距，1.5倍。阅读更省力</li>
+<li>颜色，深灰。视觉更温和</li>
+</ul>
+</li>
+<li>文字特殊处理<ul>
+<li>图片填充<ul>
+<li>粗笔画</li>
+<li>设置文字效果格式-文本填充</li>
+</ul>
+</li>
+<li>三维字体<ul>
+<li>粗笔画</li>
+<li>设置文本效果格式-文本选项-三维格式</li>
+<li>文本填充</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-3-图片"><a href="#2-3-图片" class="headerlink" title="2.3 图片"></a>2.3 图片</h3><ul>
+<li>裁剪</li>
+<li>裁剪为形状</li>
+<li>删除背景</li>
+<li>滤镜</li>
+<li>虚化</li>
+<li>阴影</li>
+</ul>
+<p><strong>注：</strong> 效果的一致性。如果使用了某个效果，最好给所有图片都添加同样的效果。</p>
+<h3 id="2-4-特殊字符"><a href="#2-4-特殊字符" class="headerlink" title="2.4 特殊字符"></a>2.4 特殊字符</h3><ul>
+<li>特殊标点<ul>
+<li>插入字符</li>
+<li>输入法</li>
+</ul>
+</li>
+<li>数学符号、公式<ul>
+<li>公式编辑器</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-5-音频"><a href="#2-5-音频" class="headerlink" title="2.5 音频"></a>2.5 音频</h3><ul>
+<li>抒发感情型的演讲<ul>
+<li>后台播放</li>
+<li>循环播放</li>
+<li>音频剪辑</li>
+<li>音频选取-不带歌词，不要干扰</li>
+</ul>
+</li>
+<li>还原真实对话<ul>
+<li>显示关联文字</li>
+<li>自动播放</li>
+<li>放映时隐藏<h3 id="2-6-视频"><a href="#2-6-视频" class="headerlink" title="2.6 视频"></a>2.6 视频</h3>直观<br>作用：</li>
+</ul>
+</li>
+<li>奠定演讲基调</li>
+<li>辅助说明具体问题</li>
+</ul>
+<h3 id="2-7-元素层级关系"><a href="#2-7-元素层级关系" class="headerlink" title="2.7 元素层级关系"></a>2.7 元素层级关系</h3><ul>
+<li>图层-每个元素为一个图层</li>
+<li>使用“选择窗格”操作每个图层</li>
+<li>上移一层/移至顶层</li>
+<li>下移一层/移至底层</li>
+</ul>
+<h3 id="2-8对齐"><a href="#2-8对齐" class="headerlink" title="2.8对齐"></a>2.8对齐</h3><p>对齐工具</p>
+<ul>
+<li>左对齐</li>
+<li>居中对齐</li>
+<li>右对齐</li>
+<li>顶部对齐</li>
+<li>底部对齐</li>
+<li>纵向分布</li>
+<li>横向分布<h3 id="2-9-复制特效"><a href="#2-9-复制特效" class="headerlink" title="2.9 复制特效"></a>2.9 复制特效</h3></li>
+<li><p>格式刷</p>
+<h3 id="2-10-位置关系"><a href="#2-10-位置关系" class="headerlink" title="2.10 位置关系"></a>2.10 位置关系</h3></li>
+<li><p>参考线</p>
+</li>
+<li>智能参考线</li>
+</ul>
+<h3 id="2-11-页面背景"><a href="#2-11-页面背景" class="headerlink" title="2.11 页面背景"></a>2.11 页面背景</h3><ul>
+<li>纯色</li>
+<li>渐变背景</li>
+<li>图片处理</li>
+<li>图案</li>
+</ul>
+<h3 id="2-12-尺寸"><a href="#2-12-尺寸" class="headerlink" title="2.12 尺寸"></a>2.12 尺寸</h3><ul>
+<li>比例<ul>
+<li>4:3</li>
+<li>16:9</li>
+</ul>
+</li>
+<li>酒店、剧院等常用 <ul>
+<li>2.35:1</li>
+</ul>
+</li>
+<li>PPT最大长度<ul>
+<li>142.24cm</li>
+<li>等比例缩放</li>
+</ul>
+</li>
+<li>比例切换<ul>
+<li>设计-选择板式</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-13-项目符号"><a href="#2-13-项目符号" class="headerlink" title="2.13 项目符号"></a>2.13 项目符号</h3><ul>
+<li>有序符号</li>
+<li>无序符号</li>
+</ul>
+<h3 id="2-14图表"><a href="#2-14图表" class="headerlink" title="2.14图表"></a>2.14图表</h3><ul>
+<li>图表类型选择</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>要表达的数据和信息</th>
+<th>饼图</th>
+<th>柱形图</th>
+<th>条形图</th>
+<th>折线图</th>
+<th>面积图</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>成分（整体的一部分）</td>
+<td>√</td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>排序（数据间比较）</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>时间序列（走势、趋势）</td>
+<td></td>
+<td>√</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+</tr>
+<tr>
+<td>频率分布（数据频次）</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>相关性（数据间关联）</td>
+<td></td>
+<td>√</td>
+<td>√</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>使用规范<ul>
+<li>使用折线图表示趋势，不要选择虚线（存在障碍）。要使用 <em>实线</em> ，增强数据间连贯性。</li>
+<li>使用面积图时，为了更清楚地看清所有数据的走势，要对面积进行 <em>透明化处理</em> 。</li>
+<li>在对数据严谨性有要求的场合下，不要使用立体图表，而要选择 <em>平面图表</em> 。</li>
+<li>如果数据间差异不大，不要用饼图进行对比，这几乎看不出差异。正确的做法是用 <em>柱状图</em> 进行对比。</li>
+<li>使用饼状图时，确保 最大份额从 <em>12点钟方向</em> 开始,不能有丝毫差异；尽量确保按照 <em>从大到小</em> 的份额进行排序。</li>
+<li>使用起泡来进行面积表示时，一定要确保面积之间 <em>倍数关系</em> 的准确性。</li>
+<li>纵坐标的起始数据 <em>要从0开始</em> ，不要擅自修改起始数据。</li>
+<li>柱状图各分类之间的间距不能过大或过小，保持在柱状图宽度的 50%-80%之间。</li>
+<li>不要随意删除图表所包含的内容，不要随意删除图表标题、图例等。</li>
+<li>如果需要进行数据间比对，最好使用 <em>不同的颜色</em> 进行区分。</li>
+</ul>
+</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/f76ce67d.html" data-id="cjd5oz598000cnkvtz60syrxt" class="article-share-link">Teilen</a>
+      <a data-url="https://sddysz.cn/88a11e18.html" data-id="cjd6rp037000f1ovtpfslakua" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/PPT设计思维/5、关于模板" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/15a628d8.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/office/">office</a>►<a class="article-category-link" href="/categories/office/ppt/">ppt</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/15a628d8.html">五、关于模板</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="关于模板"><a href="#关于模板" class="headerlink" title="关于模板"></a>关于模板</h1><h3 id="PPT模板寻找"><a href="#PPT模板寻找" class="headerlink" title="PPT模板寻找"></a>PPT模板寻找</h3><ul>
+<li><p>免费资源</p>
+<ul>
+<li><a href="http://officeplus.cn" target="_blank" rel="noopener">微软官方模板</a><ul>
+<li>设计上乘</li>
+<li>设计规范</li>
+</ul>
+</li>
+<li><a href="http://pooban.com" target="_blank" rel="noopener">扑奔网</a></li>
+<li><a href="http://pptfans.cn" target="_blank" rel="noopener">PPTfans</a></li>
+<li><a href="http://ypppt.com" target="_blank" rel="noopener">优品PPT</a></li>
+<li><a href="http://tretars.com" target="_blank" rel="noopener">逼格PPT</a></li>
+</ul>
+</li>
+<li><p>收费资源</p>
+<ul>
+<li><a href="http://pptstore.net" target="_blank" rel="noopener">pptstore</a></li>
+<li><a href="http://yanj.cn" target="_blank" rel="noopener">演界</a></li>
+</ul>
+</li>
+<li><p>修改模板</p>
+<ul>
+<li>修改母版</li>
+<li>修改模板固有的设计方案<ul>
+<li>在母版中自定义字体</li>
+<li>在母版中自定义配色</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/15a628d8.html" data-id="cjd6rp039000g1ovt3w09m0bz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/PPT设计思维/7、附录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/579c81bc.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/office/">office</a>►<a class="article-category-link" href="/categories/office/ppt/">ppt</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/579c81bc.html">七、附录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="PPT相关软件推荐"><a href="#PPT相关软件推荐" class="headerlink" title="PPT相关软件推荐"></a>PPT相关软件推荐</h1><ul>
+<li>PhotoZoom Pro<ul>
+<li>放大图片分辨率</li>
+</ul>
+</li>
+<li>PPTMinimizer<ul>
+<li>压缩PPT大小</li>
+</ul>
+</li>
+<li><a href="http://www.nordritools.com" target="_blank" rel="noopener">nordritools</a><ul>
+<li>PPT插件</li>
+</ul>
+</li>
+<li><a href="https://wordart.com/" target="_blank" rel="noopener">TAGUL</a><ul>
+<li>文字云</li>
+</ul>
+</li>
+<li><a href="http://www.collageitfree.com/" target="_blank" rel="noopener">Collagelt Pro</a><ul>
+<li>图片拼接</li>
+<li>图片墙</li>
+</ul>
+</li>
+<li><a href="http://www.piyingke.com/" target="_blank" rel="noopener">皮影客</a><ul>
+<li>制作简单视频</li>
+</ul>
+</li>
+<li><a href="https://h5.baidu.com" target="_blank" rel="noopener">百度H5</a><ul>
+<li>免费H5制作平台</li>
+</ul>
+</li>
+<li>Smallpdf<ul>
+<li>将PDF文件转换为office格式</li>
+</ul>
+</li>
+</ul>
+<h1 id="搞定全图型PPT"><a href="#搞定全图型PPT" class="headerlink" title="搞定全图型PPT"></a>搞定全图型PPT</h1><ul>
+<li>做好全图型PPT的三个能力<ul>
+<li>排版能力<ul>
+<li>对齐-文字大小、粗细、颜色对比</li>
+<li>斜对比</li>
+</ul>
+</li>
+<li>构图能力<ul>
+<li>当配图有明显的视觉重心与非重心之分时，文案放在非重心区域的中心偏上</li>
+<li>没有明显区分时，将文案放在非重心区域的中心位置</li>
+<li>当配图没有视觉重心时，将文案写在图片的中心偏上。必要时插入半透明形状</li>
+<li>当配图的视觉重心处于中心时，也把文案写在图片的中心偏上位置</li>
+</ul>
+</li>
+<li>配图能力<ul>
+<li>图片与文案之间的相关性</li>
+<li>高清、美观、创意</li>
+<li><a href="https://pixabay.co" target="_blank" rel="noopener">pixabay</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>排版是为了提升文案的美观性，并且突出重点。</li>
+<li>配图是为了寻找到更有表现力的图片，来丰富页面视觉效果</li>
+<li>构图是为了确定文案在图片上的位置，从而使整个页面看起来更加平衡</li>
+</ul>
+<h1 id="网站推荐"><a href="#网站推荐" class="headerlink" title="网站推荐"></a>网站推荐</h1><ul>
+<li><a href="http://www.presentationload.com" target="_blank" rel="noopener">www.presentationload.com</a><ul>
+<li>偏重内容设计</li>
+</ul>
+</li>
+<li><a href="http://dribbble.com" target="_blank" rel="noopener">dribbble.com</a><ul>
+<li>提升配色能力</li>
+</ul>
+</li>
+<li><a href="www.zcool.com.cn">www.zcool.com.cn</a><ul>
+<li>看作品</li>
+<li>看文章</li>
+</ul>
+</li>
+</ul>
+<h1 id="做好演讲型PPT"><a href="#做好演讲型PPT" class="headerlink" title="做好演讲型PPT"></a>做好演讲型PPT</h1><h3 id="PPT准备"><a href="#PPT准备" class="headerlink" title="PPT准备"></a>PPT准备</h3><ul>
+<li>演讲前准备<ul>
+<li>演讲屏幕尺寸</li>
+<li>演讲场地大小<ul>
+<li>文字、细节的大小</li>
+</ul>
+</li>
+<li>听众的属性<ul>
+<li>内容的深浅</li>
+</ul>
+</li>
+<li>演讲的时长</li>
+</ul>
+</li>
+<li>先写内容，再设计<ul>
+<li>金字塔原理</li>
+<li>先写最终观点，然后寻找一级论据，完成第一次拆分。不断反复</li>
+</ul>
+</li>
+<li>内容起到的作用是提示，而非说明<ul>
+<li>演讲型PPT的内容要更简洁</li>
+</ul>
+</li>
+<li>多用图片，少用文字</li>
+<li>多用图表，少用表格</li>
+<li>使用必要的动画来引导观众的注意力<ul>
+<li>必要的，而非大量的</li>
+</ul>
+</li>
+<li>考虑使用配乐</li>
+<li>注重幻灯片风格统一<ul>
+<li>语言风格上的统一</li>
+<li>设计风格上的统一</li>
+<li>素材风格上的统一</li>
+</ul>
+</li>
+<li>注重封面和尾页设计</li>
+<li>演讲内容多时，一定要使用目录页</li>
+</ul>
+<h3 id="演讲的准备"><a href="#演讲的准备" class="headerlink" title="演讲的准备"></a>演讲的准备</h3><ul>
+<li>一定要熟练地把演讲内容和PPT内容对应起来</li>
+<li>一定要提前演练</li>
+<li>开启演讲者视图</li>
+<li>刚开始就引起观众兴趣</li>
+<li>多讲故事，少说人话</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/579c81bc.html" data-id="cjd6rp03a000h1ovtgrtk0qfl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Reading_Notes/PPT设计思维/1、幻灯片设计前的内容梳理" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/c3d1f900.html" class="article-date">
+  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/office/">office</a>►<a class="article-category-link" href="/categories/office/ppt/">ppt</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/c3d1f900.html">一、幻灯片设计前的内容梳理</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="幻灯片设计前的内容梳理"><a href="#幻灯片设计前的内容梳理" class="headerlink" title="幻灯片设计前的内容梳理"></a>幻灯片设计前的内容梳理</h1><h3 id="1-1文字：多VS少"><a href="#1-1文字：多VS少" class="headerlink" title="1.1文字：多VS少"></a>1.1文字：多VS少</h3><ul>
+<li>演讲型PPT：主要是听人演讲<ul>
+<li>简约</li>
+<li>文字少</li>
+<li>图片多</li>
+<li>动画炫酷</li>
+</ul>
+</li>
+<li>阅读型PPT：要求读者能自行观看，不需要讲解<ul>
+<li>内容详尽</li>
+<li>逻辑性强</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-2内容准备步骤"><a href="#1-2内容准备步骤" class="headerlink" title="1.2内容准备步骤"></a>1.2内容准备步骤</h3><ul>
+<li>明确内容表达的逻辑关系<ul>
+<li>先后顺序：是什么，为什么，怎么做<ul>
+<li>举例：</li>
+<li>工作总结</li>
+<li>存在问题</li>
+<li>改进措施</li>
+<li>未来计划</li>
+</ul>
+</li>
+<li>总分结构：分几个方面<ul>
+<li>一件事情由几个方面构成</li>
+<li>一种结果由哪几个原因导致</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>通过思维导图构建内容框架</p>
+<ul>
+<li>XMind</li>
+<li>技巧：先分类，再列举</li>
+</ul>
+</li>
+<li><p>用论据支撑论点的方式填充内容</p>
+<ul>
+<li>论点</li>
+<li>论据-数据、图表、图片或视频</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-3幻灯片结构"><a href="#1-3幻灯片结构" class="headerlink" title="1.3幻灯片结构"></a>1.3幻灯片结构</h3><ul>
+<li>封面</li>
+<li>目录</li>
+<li>提示页-提示下一部分的内容</li>
+<li>内容</li>
+<li>封底</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://sddysz.cn/c3d1f900.html" data-id="cjd6rp03c000k1ovtgco1s8de" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
@@ -645,7 +1159,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/f0fb456d.html" data-id="cjd5oz59o000fnkvtgsumk6zf" class="article-share-link">Teilen</a>
+      <a data-url="https://sddysz.cn/f0fb456d.html" data-id="cjd6rp03e000l1ovte4gcj7ly" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
@@ -657,9 +1171,9 @@
 
 
   
-    <article id="post-Reading_Notes/PPT设计思维/2、幻灯片操作术" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-Reading_Notes/PPT设计思维/概览" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/88a11e18.html" class="article-date">
+    <a href="/30437e0f.html" class="article-date">
   <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
 </a>
     
@@ -675,7 +1189,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/88a11e18.html">二、幻灯片操作术</a>
+      <a class="article-title" href="/30437e0f.html">PPT设计思维-目录</a>
     </h1>
   
 
@@ -683,317 +1197,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="幻灯片操作术"><a href="#幻灯片操作术" class="headerlink" title="幻灯片操作术"></a>幻灯片操作术</h1><ul>
-<li>形状</li>
-<li>文字</li>
-<li>图片</li>
-<li>音频</li>
-<li>视频</li>
-<li>字符</li>
-<li>层级</li>
-<li>对齐</li>
-<li>格式刷</li>
-<li>参考线</li>
-<li>背景</li>
-<li>尺寸</li>
-<li>条理</li>
-<li>图表</li>
-</ul>
-<h3 id="2-1形状"><a href="#2-1形状" class="headerlink" title="2.1形状"></a>2.1形状</h3><p>形状的作用</p>
+        <h1 id="PPT设计思维"><a href="#PPT设计思维" class="headerlink" title="PPT设计思维"></a>PPT设计思维</h1><blockquote>
 <ul>
-<li>绘图<ul>
-<li>通过形状的组合，绘制矢量图</li>
+<li>作者：邵云蛟</li>
+<li>出版社：电子工业出版社</li>
+<li>年份：2016</li>
+<li>页数：210</li>
+<li>来源：淘宝购买</li>
+<li>简介：介绍PPT的内容编排、设计美化、资源使用和操作技巧等。</li>
+<li>作者简介：微信自媒体“旁门左道”作者，知乎万赞答主，PPT话题相关答案手持量超过38万，排名知乎第一。</li>
 </ul>
-</li>
-<li>突出重点内容<ul>
-<li>色差反衬，给关键字加上形状的背景色</li>
-<li>半透明背景，在图片上清晰地显示文字，同时显示图片和文字</li>
+</blockquote>
+<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
+<li><a href="/c3d1f900.html">幻灯片设计前的内容梳理</a></li>
+<li><a href="/88a11e18.html">幻灯片操作术</a></li>
+<li><a href="f76ce67d.html">动画在幻灯片中的3大作用</a></li>
+<li><a href="/f0fb456d.html">幻灯片美化设计</a></li>
+<li><a href="/15a628d8.html">关于模板</a></li>
+<li><a href="/893b7a9e.html">幻灯片的多样呈现</a></li>
+<li><a href="/579c81bc.html">附录A 软件推荐</a></li>
 </ul>
-</li>
-<li>规整化不统一元素<ul>
-<li>外层套形状，例如将大小不一的logo套上同样大小的形状。</li>
-<li>相近内容归类，将关联的内容放入同一个形状中。</li>
-</ul>
-</li>
-<li>表达内容见逻辑关系（smartArt）<ul>
-<li>并列</li>
-<li>层级</li>
-<li>循环</li>
-<li>因果</li>
-</ul>
-</li>
-<li><p>表达抽象概念</p>
-<ul>
-<li>形象化小图标，</li>
-<li>形状间布尔运算<ul>
-<li>加法</li>
-<li>减法</li>
-<li>拆分</li>
-<li>相交</li>
-<li>剪除<h3 id="2-2文字"><a href="#2-2文字" class="headerlink" title="2.2文字"></a>2.2文字</h3></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>大段文字</p>
-<ul>
-<li>字体，无衬线字体。</li>
-<li>行间距，1.5倍。阅读更省力</li>
-<li>颜色，深灰。视觉更温和</li>
-</ul>
-</li>
-<li>文字特殊处理<ul>
-<li>图片填充<ul>
-<li>粗笔画</li>
-<li>设置文字效果格式-文本填充</li>
-</ul>
-</li>
-<li>三维字体<ul>
-<li>粗笔画</li>
-<li>设置文本效果格式-文本选项-三维格式</li>
-<li>文本填充</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-3-图片"><a href="#2-3-图片" class="headerlink" title="2.3 图片"></a>2.3 图片</h3><ul>
-<li>裁剪</li>
-<li>裁剪为形状</li>
-<li>删除背景</li>
-<li>滤镜</li>
-<li>虚化</li>
-<li>阴影</li>
-</ul>
-<p><strong>注：</strong> 效果的一致性。如果使用了某个效果，最好给所有图片都添加同样的效果。</p>
-<h3 id="2-4-特殊字符"><a href="#2-4-特殊字符" class="headerlink" title="2.4 特殊字符"></a>2.4 特殊字符</h3><ul>
-<li>特殊标点<ul>
-<li>插入字符</li>
-<li>输入法</li>
-</ul>
-</li>
-<li>数学符号、公式<ul>
-<li>公式编辑器</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-5-音频"><a href="#2-5-音频" class="headerlink" title="2.5 音频"></a>2.5 音频</h3><ul>
-<li>抒发感情型的演讲<ul>
-<li>后台播放</li>
-<li>循环播放</li>
-<li>音频剪辑</li>
-<li>音频选取-不带歌词，不要干扰</li>
-</ul>
-</li>
-<li>还原真实对话<ul>
-<li>显示关联文字</li>
-<li>自动播放</li>
-<li>放映时隐藏<h3 id="2-6-视频"><a href="#2-6-视频" class="headerlink" title="2.6 视频"></a>2.6 视频</h3>直观<br>作用：</li>
-</ul>
-</li>
-<li>奠定演讲基调</li>
-<li>辅助说明具体问题</li>
-</ul>
-<h3 id="2-7-元素层级关系"><a href="#2-7-元素层级关系" class="headerlink" title="2.7 元素层级关系"></a>2.7 元素层级关系</h3><ul>
-<li>图层-每个元素为一个图层</li>
-<li>使用“选择窗格”操作每个图层</li>
-<li>上移一层/移至顶层</li>
-<li>下移一层/移至底层</li>
-</ul>
-<h3 id="2-8对齐"><a href="#2-8对齐" class="headerlink" title="2.8对齐"></a>2.8对齐</h3><p>对齐工具</p>
-<ul>
-<li>左对齐</li>
-<li>居中对齐</li>
-<li>右对齐</li>
-<li>顶部对齐</li>
-<li>底部对齐</li>
-<li>纵向分布</li>
-<li>横向分布<h3 id="2-9-复制特效"><a href="#2-9-复制特效" class="headerlink" title="2.9 复制特效"></a>2.9 复制特效</h3></li>
-<li><p>格式刷</p>
-<h3 id="2-10-位置关系"><a href="#2-10-位置关系" class="headerlink" title="2.10 位置关系"></a>2.10 位置关系</h3></li>
-<li><p>参考线</p>
-</li>
-<li>智能参考线</li>
-</ul>
-<h3 id="2-11-页面背景"><a href="#2-11-页面背景" class="headerlink" title="2.11 页面背景"></a>2.11 页面背景</h3><ul>
-<li>纯色</li>
-<li>渐变背景</li>
-<li>图片处理</li>
-<li>图案</li>
-</ul>
-<h3 id="2-12-尺寸"><a href="#2-12-尺寸" class="headerlink" title="2.12 尺寸"></a>2.12 尺寸</h3><ul>
-<li>比例<ul>
-<li>4:3</li>
-<li>16:9</li>
-</ul>
-</li>
-<li>酒店、剧院等常用 <ul>
-<li>2.35:1</li>
-</ul>
-</li>
-<li>PPT最大长度<ul>
-<li>142.24cm</li>
-<li>等比例缩放</li>
-</ul>
-</li>
-<li>比例切换<ul>
-<li>设计-选择板式</li>
-</ul>
-</li>
-</ul>
-<h3 id="2-13-项目符号"><a href="#2-13-项目符号" class="headerlink" title="2.13 项目符号"></a>2.13 项目符号</h3><ul>
-<li>有序符号</li>
-<li>无序符号</li>
-</ul>
-<h3 id="2-14图表"><a href="#2-14图表" class="headerlink" title="2.14图表"></a>2.14图表</h3><ul>
-<li>图表类型选择</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>要表达的数据和信息</th>
-<th>饼图</th>
-<th>柱形图</th>
-<th>条形图</th>
-<th>折线图</th>
-<th>面积图</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>成分（整体的一部分）</td>
-<td>√</td>
-<td>√</td>
-<td>√</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>排序（数据间比较）</td>
-<td></td>
-<td>√</td>
-<td>√</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>时间序列（走势、趋势）</td>
-<td></td>
-<td>√</td>
-<td></td>
-<td>√</td>
-<td>√</td>
-</tr>
-<tr>
-<td>频率分布（数据频次）</td>
-<td></td>
-<td>√</td>
-<td>√</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>相关性（数据间关联）</td>
-<td></td>
-<td>√</td>
-<td>√</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>使用规范<ul>
-<li>使用折线图表示趋势，不要选择虚线（存在障碍）。要使用 <em>实线</em> ，增强数据间连贯性。</li>
-<li>使用面积图时，为了更清楚地看清所有数据的走势，要对面积进行 <em>透明化处理</em> 。</li>
-<li>在对数据严谨性有要求的场合下，不要使用立体图表，而要选择 <em>平面图表</em> 。</li>
-<li>如果数据间差异不大，不要用饼图进行对比，这几乎看不出差异。正确的做法是用 <em>柱状图</em> 进行对比。</li>
-<li>使用饼状图时，确保 最大份额从 <em>12点钟方向</em> 开始,不能有丝毫差异；尽量确保按照 <em>从大到小</em> 的份额进行排序。</li>
-<li>使用起泡来进行面积表示时，一定要确保面积之间 <em>倍数关系</em> 的准确性。</li>
-<li>纵坐标的起始数据 <em>要从0开始</em> ，不要擅自修改起始数据。</li>
-<li>柱状图各分类之间的间距不能过大或过小，保持在柱状图宽度的 50%-80%之间。</li>
-<li>不要随意删除图表所包含的内容，不要随意删除图表标题、图例等。</li>
-<li>如果需要进行数据间比对，最好使用 <em>不同的颜色</em> 进行区分。</li>
-</ul>
-</li>
-</ul>
+<p><img src="/images/PPT设计思维/PPT设计思维.png" alt="目录结构" title="目录结构"></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/88a11e18.html" data-id="cjd5oz59o000gnkvtju59jjxg" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Reading_Notes/PPT设计思维/5、关于模板" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/15a628d8.html" class="article-date">
-  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/office/">office</a>►<a class="article-category-link" href="/categories/office/ppt/">ppt</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/15a628d8.html">五、关于模板</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="关于模板"><a href="#关于模板" class="headerlink" title="关于模板"></a>关于模板</h1><h3 id="PPT模板寻找"><a href="#PPT模板寻找" class="headerlink" title="PPT模板寻找"></a>PPT模板寻找</h3><ul>
-<li><p>免费资源</p>
-<ul>
-<li><a href="http://officeplus.cn" target="_blank" rel="noopener">微软官方模板</a><ul>
-<li>设计上乘</li>
-<li>设计规范</li>
-</ul>
-</li>
-<li><a href="http://pooban.com" target="_blank" rel="noopener">扑奔网</a></li>
-<li><a href="http://pptfans.cn" target="_blank" rel="noopener">PPTfans</a></li>
-<li><a href="http://ypppt.com" target="_blank" rel="noopener">优品PPT</a></li>
-<li><a href="http://tretars.com" target="_blank" rel="noopener">逼格PPT</a></li>
-</ul>
-</li>
-<li><p>收费资源</p>
-<ul>
-<li><a href="http://pptstore.net" target="_blank" rel="noopener">pptstore</a></li>
-<li><a href="http://yanj.cn" target="_blank" rel="noopener">演界</a></li>
-</ul>
-</li>
-<li><p>修改模板</p>
-<ul>
-<li>修改母版</li>
-<li>修改模板固有的设计方案<ul>
-<li>在母版中自定义字体</li>
-<li>在母版中自定义配色</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sddysz.cn/15a628d8.html" data-id="cjd5oz59o000hnkvty1qeb7pr" class="article-share-link">Teilen</a>
+      <a data-url="https://sddysz.cn/30437e0f.html" data-id="cjd6rp03h000p1ovt2s51niop" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
@@ -1080,305 +1309,10 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://sddysz.cn/893b7a9e.html" data-id="cjd5oz59o000knkvtwj0h9bm3" class="article-share-link">Teilen</a>
+      <a data-url="https://sddysz.cn/893b7a9e.html" data-id="cjd6rp03k000r1ovtwlx7t0qc" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Reading_Notes/PPT设计思维/7、附录" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/579c81bc.html" class="article-date">
-  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/office/">office</a>►<a class="article-category-link" href="/categories/office/ppt/">ppt</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/579c81bc.html">七、附录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="PPT相关软件推荐"><a href="#PPT相关软件推荐" class="headerlink" title="PPT相关软件推荐"></a>PPT相关软件推荐</h1><ul>
-<li>PhotoZoom Pro<ul>
-<li>放大图片分辨率</li>
-</ul>
-</li>
-<li>PPTMinimizer<ul>
-<li>压缩PPT大小</li>
-</ul>
-</li>
-<li><a href="http://www.nordritools.com" target="_blank" rel="noopener">nordritools</a><ul>
-<li>PPT插件</li>
-</ul>
-</li>
-<li><a href="https://wordart.com/" target="_blank" rel="noopener">TAGUL</a><ul>
-<li>文字云</li>
-</ul>
-</li>
-<li><a href="http://www.collageitfree.com/" target="_blank" rel="noopener">Collagelt Pro</a><ul>
-<li>图片拼接</li>
-<li>图片墙</li>
-</ul>
-</li>
-<li><a href="http://www.piyingke.com/" target="_blank" rel="noopener">皮影客</a><ul>
-<li>制作简单视频</li>
-</ul>
-</li>
-<li><a href="https://h5.baidu.com" target="_blank" rel="noopener">百度H5</a><ul>
-<li>免费H5制作平台</li>
-</ul>
-</li>
-<li>Smallpdf<ul>
-<li>将PDF文件转换为office格式</li>
-</ul>
-</li>
-</ul>
-<h1 id="搞定全图型PPT"><a href="#搞定全图型PPT" class="headerlink" title="搞定全图型PPT"></a>搞定全图型PPT</h1><ul>
-<li>做好全图型PPT的三个能力<ul>
-<li>排版能力<ul>
-<li>对齐-文字大小、粗细、颜色对比</li>
-<li>斜对比</li>
-</ul>
-</li>
-<li>构图能力<ul>
-<li>当配图有明显的视觉重心与非重心之分时，文案放在非重心区域的中心偏上</li>
-<li>没有明显区分时，将文案放在非重心区域的中心位置</li>
-<li>当配图没有视觉重心时，将文案写在图片的中心偏上。必要时插入半透明形状</li>
-<li>当配图的视觉重心处于中心时，也把文案写在图片的中心偏上位置</li>
-</ul>
-</li>
-<li>配图能力<ul>
-<li>图片与文案之间的相关性</li>
-<li>高清、美观、创意</li>
-<li><a href="https://pixabay.co" target="_blank" rel="noopener">pixabay</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li>排版是为了提升文案的美观性，并且突出重点。</li>
-<li>配图是为了寻找到更有表现力的图片，来丰富页面视觉效果</li>
-<li>构图是为了确定文案在图片上的位置，从而使整个页面看起来更加平衡</li>
-</ul>
-<h1 id="网站推荐"><a href="#网站推荐" class="headerlink" title="网站推荐"></a>网站推荐</h1><ul>
-<li><a href="http://www.presentationload.com" target="_blank" rel="noopener">www.presentationload.com</a><ul>
-<li>偏重内容设计</li>
-</ul>
-</li>
-<li><a href="http://dribbble.com" target="_blank" rel="noopener">dribbble.com</a><ul>
-<li>提升配色能力</li>
-</ul>
-</li>
-<li><a href="www.zcool.com.cn">www.zcool.com.cn</a><ul>
-<li>看作品</li>
-<li>看文章</li>
-</ul>
-</li>
-</ul>
-<h1 id="做好演讲型PPT"><a href="#做好演讲型PPT" class="headerlink" title="做好演讲型PPT"></a>做好演讲型PPT</h1><h3 id="PPT准备"><a href="#PPT准备" class="headerlink" title="PPT准备"></a>PPT准备</h3><ul>
-<li>演讲前准备<ul>
-<li>演讲屏幕尺寸</li>
-<li>演讲场地大小<ul>
-<li>文字、细节的大小</li>
-</ul>
-</li>
-<li>听众的属性<ul>
-<li>内容的深浅</li>
-</ul>
-</li>
-<li>演讲的时长</li>
-</ul>
-</li>
-<li>先写内容，再设计<ul>
-<li>金字塔原理</li>
-<li>先写最终观点，然后寻找一级论据，完成第一次拆分。不断反复</li>
-</ul>
-</li>
-<li>内容起到的作用是提示，而非说明<ul>
-<li>演讲型PPT的内容要更简洁</li>
-</ul>
-</li>
-<li>多用图片，少用文字</li>
-<li>多用图表，少用表格</li>
-<li>使用必要的动画来引导观众的注意力<ul>
-<li>必要的，而非大量的</li>
-</ul>
-</li>
-<li>考虑使用配乐</li>
-<li>注重幻灯片风格统一<ul>
-<li>语言风格上的统一</li>
-<li>设计风格上的统一</li>
-<li>素材风格上的统一</li>
-</ul>
-</li>
-<li>注重封面和尾页设计</li>
-<li>演讲内容多时，一定要使用目录页</li>
-</ul>
-<h3 id="演讲的准备"><a href="#演讲的准备" class="headerlink" title="演讲的准备"></a>演讲的准备</h3><ul>
-<li>一定要熟练地把演讲内容和PPT内容对应起来</li>
-<li>一定要提前演练</li>
-<li>开启演讲者视图</li>
-<li>刚开始就引起观众兴趣</li>
-<li>多讲故事，少说人话</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sddysz.cn/579c81bc.html" data-id="cjd5oz59o000lnkvtkhgehlbq" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Reading_Notes/PPT设计思维/概览" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/30437e0f.html" class="article-date">
-  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/office/">office</a>►<a class="article-category-link" href="/categories/office/ppt/">ppt</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/30437e0f.html">PPT设计思维-目录</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="PPT设计思维"><a href="#PPT设计思维" class="headerlink" title="PPT设计思维"></a>PPT设计思维</h1><blockquote>
-<ul>
-<li>作者：邵云蛟</li>
-<li>出版社：电子工业出版社</li>
-<li>年份：2016</li>
-<li>页数：210</li>
-<li>来源：淘宝购买</li>
-<li>简介：介绍PPT的内容编排、设计美化、资源使用和操作技巧等。</li>
-<li>作者简介：微信自媒体“旁门左道”作者，知乎万赞答主，PPT话题相关答案手持量超过38万，排名知乎第一。</li>
-</ul>
-</blockquote>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li><a href="/c3d1f900.html">幻灯片设计前的内容梳理</a></li>
-<li><a href="/88a11e18.html">幻灯片操作术</a></li>
-<li><a href="f76ce67d.html">动画在幻灯片中的3大作用</a></li>
-<li><a href="/f0fb456d.html">幻灯片美化设计</a></li>
-<li><a href="/15a628d8.html">关于模板</a></li>
-<li><a href="/893b7a9e.html">幻灯片的多样呈现</a></li>
-<li><a href="/579c81bc.html">附录A 软件推荐</a></li>
-</ul>
-<p><img src="/images/PPT设计思维/PPT设计思维.png" alt="目录结构" title="目录结构"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sddysz.cn/30437e0f.html" data-id="cjd5oz59o000pnkvtlgu9imjq" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/office/">office</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ppt/">ppt</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Reading_Notes/SAP销售与分销实施指南/概览" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/52da83c5.html" class="article-date">
-  <time datetime="2018-02-02T07:00:00.000Z" itemprop="datePublished">2018-02-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/SAP/">SAP</a>►<a class="article-category-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/52da83c5.html">《SAP销售与分销实施指南》 概述</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="SAP销售与分销实施指南"><a href="#SAP销售与分销实施指南" class="headerlink" title="SAP销售与分销实施指南"></a>SAP销售与分销实施指南</h1><blockquote>
-<ul>
-<li>作者：Glynn C. Williams</li>
-<li>译者：黄佳 车皓阳</li>
-<li>出版社：人民邮电出版社</li>
-<li>年份：2010</li>
-<li>页数：455</li>
-<li>来源：电子版打印</li>
-<li>简介：SAP销售与分销模块的实施指南，主要基于ECC 6.0。</li>
-</ul>
-</blockquote>
-<h3 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h3><ul>
-<li><a href="/b7c5797e.html">第1章 SAP简介与主数据</a></li>
-<li><a href="/f869fbf2.html">第2章 主数据配置</a></li>
-<li><a href="/cf5719e8.html">第3章 销售凭证</a></li>
-<li><a href="/79c51bcc.html">第4章 合同与特殊流程</a></li>
-<li><a href="/f802240f.html">第5章 可供销售货量与需求传输</a></li>
-<li><a href="/幻灯片设计前的内容梳理.html">第6章 后勤执行流程</a></li>
-<li><a href="/幻灯片设计前的内容梳理.html">第7章 开票</a></li>
-<li><a href="/幻灯片设计前的内容梳理.html">第8章 定价与税收</a></li>
-<li><a href="/幻灯片设计前的内容梳理.html">第9章 SD功能咋项</a></li>
-<li><a href="/幻灯片设计前的内容梳理.html">第10章 信贷管理</a></li>
-<li><a href="/幻灯片设计前的内容梳理.html">第11章 高级顾问公交</a></li>
-<li><a href="/幻灯片设计前的内容梳理.html">附录 相关的事务代码</a></li>
-</ul>
-<p><img src="/images/SAP销售与分销实施指南/SAP销售与分销实施指南.png" alt="目录结构" title="目录结构"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://sddysz.cn/52da83c5.html" data-id="cjd5oz59o000rnkvt2wt8nbl8" class="article-share-link">Teilen</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SAP/">SAP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SD/">SD</a></li></ul>
 
     </footer>
   </div>
@@ -1391,7 +1325,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">weiter &raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -1400,7 +1334,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Kategorien</h3>
+    <h3 class="widget-title">Categories</h3>
     <div class="widget">
       <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/">SAP</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/PA-SD教程/">PA-SD教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/SAP/SAP销售与分销实施指南/">SAP销售与分销实施指南</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/office/">office</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/office/ppt/">ppt</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/读书笔记/">读书笔记</a></li></ul>
     </div>
@@ -1429,7 +1363,7 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Archiv</h3>
+    <h3 class="widget-title">Archives</h3>
     <div class="widget">
       <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a></li></ul>
     </div>
@@ -1439,12 +1373,12 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">letzter Beitrag</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
         
           <li>
-            <a href="/91ea59ef.html">销售组织机构特征对比</a>
+            <a href="/18373593.html">分销渠道配置</a>
           </li>
         
           <li>
@@ -1452,15 +1386,15 @@
           </li>
         
           <li>
-            <a href="/f76ce67d.html">三、动画在幻灯片中的3大作用</a>
-          </li>
-        
-          <li>
-            <a href="/f0fb456d.html">四、幻灯片美化设计</a>
+            <a href="/af053278.html">《百年孤独》读书笔记</a>
           </li>
         
           <li>
             <a href="/88a11e18.html">二、幻灯片操作术</a>
+          </li>
+        
+          <li>
+            <a href="/15a628d8.html">五、关于模板</a>
           </li>
         
       </ul>
